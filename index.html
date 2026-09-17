@@ -4,490 +4,353 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fabric</title>
-    
-    <!-- Google Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind.config.js"></script>
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
-<body class="bg-white text-main antialiased selection:bg-primary selection:text-white">
+<body>
 
-    <nav class="fixed w-full bg-white/90 backdrop-blur-md border-b border-gray-100 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <img class="h-8 w-auto" src="/assets/fabric-logo.png" alt="Fabric Logo" onerror="this.onerror=null; this.src='https://placehold.co/120x40/4A5539/FFFFFF?text=FABRIC'">
-                </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#home" class="text-graytext hover:text-main text-sm font-medium transition-colors" data-i18n="nav.home">Home</a>
-                    <a href="#problem" class="text-graytext hover:text-main text-sm font-medium transition-colors" data-i18n="nav.problem">Problem</a>
-                    <a href="#solution" class="text-graytext hover:text-main text-sm font-medium transition-colors" data-i18n="nav.solution">Solution</a>
-                    <a href="#features" class="text-graytext hover:text-main text-sm font-medium transition-colors" data-i18n="nav.features">Features</a>
-                    <a href="#benefits" class="text-graytext hover:text-main text-sm font-medium transition-colors" data-i18n="nav.benefits">Benefits</a>
-                    <a href="#team" class="text-graytext hover:text-main text-sm font-medium transition-colors" data-i18n="nav.team">Team</a>
-                </div>
-
-                <!-- Right Side: Lang Toggle & CTA -->
-                <div class="hidden md:flex items-center space-x-4">
-                    <div class="flex items-center bg-gray-100 rounded-full p-1" id="lang-toggle-container">
-                        <button class="lang-btn active text-xs font-semibold px-3 py-1 rounded-full bg-white shadow-sm text-main transition-all" data-lang="en">EN</button>
-                        <button class="lang-btn text-xs font-semibold px-3 py-1 rounded-full text-graytext hover:text-main transition-all" data-lang="es">ES</button>
-                    </div>
-                    <a href="#request-demo" class="bg-primary hover:bg-primary-hover text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-all shadow-sm" data-i18n="nav.demo">Request a Demo</a>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-graytext hover:text-main focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                        </svg>
-                    </button>
-                </div>
+    <nav class="nav">
+        <div class="container nav__inner">
+            <div class="nav__logo">
+                <img src="assets/images/logo/fabric-logo.png" alt="Fabric Logo" onerror="this.onerror=null; this.src='https://placehold.co/120x40/4A5539/FFFFFF?text=FABRIC'">
             </div>
-        </div>
-        
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col">
-                <a href="#home" class="block px-3 py-2 text-base font-medium text-main" data-i18n="nav.home">Home</a>
-                <a href="#problem" class="block px-3 py-2 text-base font-medium text-graytext" data-i18n="nav.problem">Problem</a>
-                <a href="#solution" class="block px-3 py-2 text-base font-medium text-graytext" data-i18n="nav.solution">Solution</a>
-                <a href="#features" class="block px-3 py-2 text-base font-medium text-graytext" data-i18n="nav.features">Features</a>
-                <a href="#team" class="block px-3 py-2 text-base font-medium text-graytext" data-i18n="nav.team">Team</a>
-                <div class="px-3 py-2 flex items-center space-x-2">
-                    <button class="lang-btn-mob text-sm font-semibold px-3 py-1 rounded-md bg-gray-200 text-main" data-lang="en">EN</button>
-                    <button class="lang-btn-mob text-sm font-semibold px-3 py-1 rounded-md text-graytext" data-lang="es">ES</button>
+
+            <div class="nav__menu">
+                <a href="#home" class="nav__link" data-i18n="nav.home">Home</a>
+                <a href="#problem" class="nav__link" data-i18n="nav.problem">Problem</a>
+                <a href="#solution" class="nav__link" data-i18n="nav.solution">Solution</a>
+                <a href="#features" class="nav__link" data-i18n="nav.features">Features</a>
+                <a href="#benefits" class="nav__link" data-i18n="nav.benefits">Benefits</a>
+                <a href="#team" class="nav__link" data-i18n="nav.team">Team</a>
+            </div>
+
+            <div class="nav__actions">
+                <div class="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
                 </div>
+                <a href="#request-demo" class="btn btn--primary btn--sm" data-i18n="nav.demo">Request a Demo</a>
+            </div>
+
+            <button class="nav__burger" id="mobile-menu-btn" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <div class="nav__mobile" id="mobile-menu">
+            <a href="#home" class="nav__mobile-link" data-i18n="nav.home">Home</a>
+            <a href="#problem" class="nav__mobile-link" data-i18n="nav.problem">Problem</a>
+            <a href="#solution" class="nav__mobile-link" data-i18n="nav.solution">Solution</a>
+            <a href="#features" class="nav__mobile-link" data-i18n="nav.features">Features</a>
+            <a href="#team" class="nav__mobile-link" data-i18n="nav.team">Team</a>
+            <div class="nav__mobile-lang">
+                <button class="lang-btn-mob active" data-lang="en">EN</button>
+                <button class="lang-btn-mob" data-lang="es">ES</button>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Left Text -->
-                <div class="w-full lg:w-1/2 flex flex-col items-start text-left">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl text-main leading-tight mb-6" data-i18n="hero.title">Manage your textile production with clarity.</h1>
-                    <p class="text-lg md:text-xl text-graytext mb-8 max-w-lg leading-relaxed" data-i18n="hero.subtitle">Manage production, quality, and traceability all in one place.</p>
-                    <a href="#request-demo" class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-lg text-lg font-medium transition-all shadow-md hover:shadow-lg inline-block" data-i18n="hero.btn">Request a Demo</a>
-                </div>
-                
-                <!-- Right Image Placeholder -->
-                <div class="w-full lg:w-1/2 relative">
-                    <div class="aspect-w-4 aspect-h-3 rounded-2xl overflow-hidden shadow-2xl bg-gray-100 border border-gray-200 relative">
-                        <!-- Simulated dashboard/factory image -->
-                        <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Textile+Factory+Dashboard" alt="Fabric Dashboard Preview" class="object-cover w-full h-full rounded-2xl">
-                        
-                        <!-- Floating element decoration -->
-                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-gray-100 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
-                            <div class="w-10 h-10 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
-                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <div>
-                                <p class="text-xs text-graytext font-medium" data-i18n="hero.float.label">Status</p>
-                                <p class="text-sm font-display text-main" data-i18n="hero.float.value">Batch #4092 Completed</p>
-                            </div>
-                        </div>
+    <section id="home" class="hero">
+        <div class="container hero__inner">
+            <div class="hero__text">
+                <h1 class="hero__title" data-i18n="hero.title">Manage your textile production with clarity.</h1>
+                <p class="hero__subtitle" data-i18n="hero.subtitle">Manage production, quality, and traceability all in one place.</p>
+                <a href="#request-demo" class="btn btn--primary btn--lg" data-i18n="hero.btn">Request a Demo</a>
+            </div>
+
+            <div class="hero__media">
+                <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Textile+Factory+Dashboard" alt="Fabric Dashboard Preview" class="hero__img">
+                <div class="hero__float">
+                    <div class="hero__float-icon">✓</div>
+                    <div>
+                        <p class="hero__float-label" data-i18n="hero.float.label">Status</p>
+                        <p class="hero__float-value" data-i18n="hero.float.value">Batch #4092 Completed</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="problem" class="py-20 bg-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl text-main mb-4" data-i18n="problem.title">Problem</h2>
-                <p class="text-lg text-graytext" data-i18n="problem.subtitle">Textile production is difficult to control when information is scattered.</p>
+    <section id="problem" class="section section--alt">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title" data-i18n="problem.title">Problem</h2>
+                <p class="section__subtitle" data-i18n="problem.subtitle">Textile production is difficult to control when information is scattered.</p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Card 1 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 flex flex-col h-full hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                    </div>
-                    <h3 class="text-xl mb-2" data-i18n="problem.card1.title">Production Supervisor</h3>
-                    <p class="text-primary font-medium mb-6 italic" data-i18n="problem.card1.q">"Where is the batch?"</p>
-                    <ul class="space-y-3 text-sm text-graytext flex-grow">
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card1.li1">Scattered WhatsApp messages and Excel sheets.</span></li>
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card1.li2">Manual tracking leads to lost information.</span></li>
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card1.li3">Bottlenecks are hard to identify in real-time.</span></li>
+
+            <div class="grid grid--3">
+                <div class="card">
+                    <div class="card__icon">👤</div>
+                    <h3 class="card__title" data-i18n="problem.card1.title">Production Supervisor</h3>
+                    <p class="card__quote" data-i18n="problem.card1.q">"Where is the batch?"</p>
+                    <ul class="card__list">
+                        <li data-i18n="problem.card1.li1">Scattered WhatsApp messages and Excel sheets.</li>
+                        <li data-i18n="problem.card1.li2">Manual tracking leads to lost information.</li>
+                        <li data-i18n="problem.card1.li3">Bottlenecks are hard to identify in real-time.</li>
                     </ul>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 flex flex-col h-full hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl mb-2" data-i18n="problem.card2.title">Quality Manager</h3>
-                    <p class="text-primary font-medium mb-6 italic" data-i18n="problem.card2.q">"Where did the defect come from?"</p>
-                    <ul class="space-y-3 text-sm text-graytext flex-grow">
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card2.li1">Lack of traceability per machine and operator.</span></li>
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card2.li2">High rework rates due to late detections.</span></li>
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card2.li3">Paper-based quality logs are easily misplaced.</span></li>
+                <div class="card">
+                    <div class="card__icon">✓</div>
+                    <h3 class="card__title" data-i18n="problem.card2.title">Quality Manager</h3>
+                    <p class="card__quote" data-i18n="problem.card2.q">"Where did the defect come from?"</p>
+                    <ul class="card__list">
+                        <li data-i18n="problem.card2.li1">Lack of traceability per machine and operator.</li>
+                        <li data-i18n="problem.card2.li2">High rework rates due to late detections.</li>
+                        <li data-i18n="problem.card2.li3">Paper-based quality logs are easily misplaced.</li>
                     </ul>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-200 flex flex-col h-full hover:shadow-md transition-shadow">
-                    <div class="w-12 h-12 bg-gray-50 rounded-lg flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                    </div>
-                    <h3 class="text-xl mb-2" data-i18n="problem.card3.title">MYPE Owner</h3>
-                    <p class="text-primary font-medium mb-6 italic" data-i18n="problem.card3.q">"What is affecting my operation?"</p>
-                    <ul class="space-y-3 text-sm text-graytext flex-grow">
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card3.li1">No clear metrics on productivity or waste.</span></li>
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card3.li2">Difficult to make decisions without reliable data.</span></li>
-                        <li class="flex items-start"><span class="text-red-400 mr-2 mt-0.5">•</span> <span data-i18n="problem.card3.li3">Margins shrink due to unseen inefficiencies.</span></li>
+                <div class="card">
+                    <div class="card__icon">🏢</div>
+                    <h3 class="card__title" data-i18n="problem.card3.title">MYPE Owner</h3>
+                    <p class="card__quote" data-i18n="problem.card3.q">"What is affecting my operation?"</p>
+                    <ul class="card__list">
+                        <li data-i18n="problem.card3.li1">No clear metrics on productivity or waste.</li>
+                        <li data-i18n="problem.card3.li2">Difficult to make decisions without reliable data.</li>
+                        <li data-i18n="problem.card3.li3">Margins shrink due to unseen inefficiencies.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="solution" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-3" data-i18n="solution.label">SOLUTION</h2>
-                <p class="text-3xl md:text-4xl text-main font-display" data-i18n="solution.title">Fabric connects the information behind every operation.</p>
+    <section id="solution" class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__eyebrow" data-i18n="solution.label">SOLUTION</h2>
+                <p class="section__title section__title--lg" data-i18n="solution.title">Fabric connects the information behind every operation.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Sol Card 1 -->
-                <div class="group border border-gray-200 rounded-2xl p-8 hover:border-primary/50 transition-colors flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    <h3 class="text-2xl mb-6" data-i18n="solution.card1.title">Production Tracking</h3>
-                    
-                    <div class="mb-8 space-y-4 flex-grow text-sm">
-                        <div class="bg-red-50 p-3 rounded-lg border border-red-100 text-graytext">
-                            <span class="font-semibold text-red-700 block mb-1" data-i18n="solution.problem_label">PROBLEM</span>
+            <div class="grid grid--3">
+                <div class="solution-card">
+                    <h3 class="solution-card__title" data-i18n="solution.card1.title">Production Tracking</h3>
+                    <div class="solution-card__body">
+                        <div class="solution-block solution-block--problem">
+                            <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
                             <span data-i18n="solution.card1.prob">Manual tracing, scattered reports.</span>
                         </div>
-                        <div class="bg-green-50 p-3 rounded-lg border border-green-100 text-graytext">
-                            <span class="font-semibold text-primary block mb-1" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
+                        <div class="solution-block solution-block--fabric">
+                            <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
                             <span data-i18n="solution.card1.sol">Digital batch tracking in real-time.</span>
                         </div>
                     </div>
-                    
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <div class="inline-flex items-center bg-tagbg text-tagtext font-mono text-xs px-3 py-2 rounded font-medium w-full overflow-hidden text-ellipsis whitespace-nowrap">
-                            <span data-i18n="solution.card1.tag">Batch &rarr; Stage &rarr; Quantity &rarr; History</span>
-                        </div>
+                    <div class="solution-card__tag">
+                        <span data-i18n="solution.card1.tag">Batch → Stage → Quantity → History</span>
                     </div>
                 </div>
 
-                <!-- Sol Card 2 -->
-                <div class="group border border-gray-200 rounded-2xl p-8 hover:border-primary/50 transition-colors flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    <h3 class="text-2xl mb-6" data-i18n="solution.card2.title">Quality Control</h3>
-                    
-                    <div class="mb-8 space-y-4 flex-grow text-sm">
-                        <div class="bg-red-50 p-3 rounded-lg border border-red-100 text-graytext">
-                            <span class="font-semibold text-red-700 block mb-1" data-i18n="solution.problem_label">PROBLEM</span>
+                <div class="solution-card">
+                    <h3 class="solution-card__title" data-i18n="solution.card2.title">Quality Control</h3>
+                    <div class="solution-card__body">
+                        <div class="solution-block solution-block--problem">
+                            <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
                             <span data-i18n="solution.card2.prob">Late detections, unrecorded defects.</span>
                         </div>
-                        <div class="bg-green-50 p-3 rounded-lg border border-green-100 text-graytext">
-                            <span class="font-semibold text-primary block mb-1" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
+                        <div class="solution-block solution-block--fabric">
+                            <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
                             <span data-i18n="solution.card2.sol">Standardized digital inspection forms.</span>
                         </div>
                     </div>
-                    
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <div class="inline-flex items-center bg-tagbg text-tagtext font-mono text-xs px-3 py-2 rounded font-medium w-full overflow-hidden text-ellipsis whitespace-nowrap">
-                            <span data-i18n="solution.card2.tag">Inspection &rarr; Defect &rarr; Rework / Waste</span>
-                        </div>
+                    <div class="solution-card__tag">
+                        <span data-i18n="solution.card2.tag">Inspection → Defect → Rework / Waste</span>
                     </div>
                 </div>
 
-                <!-- Sol Card 3 -->
-                <div class="group border border-gray-200 rounded-2xl p-8 hover:border-primary/50 transition-colors flex flex-col relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
-                    <h3 class="text-2xl mb-6" data-i18n="solution.card3.title">Operational Visibility</h3>
-                    
-                    <div class="mb-8 space-y-4 flex-grow text-sm">
-                        <div class="bg-red-50 p-3 rounded-lg border border-red-100 text-graytext">
-                            <span class="font-semibold text-red-700 block mb-1" data-i18n="solution.problem_label">PROBLEM</span>
+                <div class="solution-card">
+                    <h3 class="solution-card__title" data-i18n="solution.card3.title">Operational Visibility</h3>
+                    <div class="solution-card__body">
+                        <div class="solution-block solution-block--problem">
+                            <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
                             <span data-i18n="solution.card3.prob">Blind spots in production speed.</span>
                         </div>
-                        <div class="bg-green-50 p-3 rounded-lg border border-green-100 text-graytext">
-                            <span class="font-semibold text-primary block mb-1" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
+                        <div class="solution-block solution-block--fabric">
+                            <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
                             <span data-i18n="solution.card3.sol">Centralized dashboards and KPIs.</span>
                         </div>
                     </div>
-                    
-                    <div class="mt-auto pt-4 border-t border-gray-100">
-                        <div class="inline-flex items-center bg-tagbg text-tagtext font-mono text-xs px-3 py-2 rounded font-medium w-full overflow-hidden text-ellipsis whitespace-nowrap">
-                            <span data-i18n="solution.card3.tag">Data &rarr; Visibility &rarr; Decisions</span>
+                    <div class="solution-card__tag">
+                        <span data-i18n="solution.card3.tag">Data → Visibility → Decisions</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="section section--alt">
+        <div class="container">
+            <div class="section__header section__header--left">
+                <h2 class="section__title" data-i18n="features.title">Key Features</h2>
+                <p class="section__subtitle" data-i18n="features.subtitle">Tools designed to optimize textile production management.</p>
+            </div>
+
+            <div class="grid grid--4">
+                <div class="feature">
+                    <div class="feature__icon">📦</div>
+                    <h4 class="feature__title" data-i18n="features.feat1">Production Batch Management</h4>
+                </div>
+
+                <div class="feature">
+                    <div class="feature__icon">✓</div>
+                    <h4 class="feature__title" data-i18n="features.feat2">Quality Control</h4>
+                </div>
+
+                <div class="feature">
+                    <div class="feature__icon">⚙</div>
+                    <h4 class="feature__title" data-i18n="features.feat3">Machinery</h4>
+                </div>
+
+                <div class="feature">
+                    <div class="feature__icon">📊</div>
+                    <h4 class="feature__title" data-i18n="features.feat4">Reports & Metrics</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="benefits" class="section">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title" data-i18n="benefits.title">Benefits of Fabric</h2>
+                <p class="section__subtitle" data-i18n="benefits.subtitle">Improve your textile processes efficiently.</p>
+            </div>
+
+            <div class="grid grid--3 grid--center">
+                <div class="benefit">
+                    <div class="benefit__icon">🔍</div>
+                    <h3 class="benefit__title" data-i18n="benefits.ben1.title">Better Traceability</h3>
+                    <p class="benefit__desc" data-i18n="benefits.ben1.desc">Track every step of a product's journey to ensure compliance and find roots of defects instantly.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit__icon">⚙</div>
+                    <h3 class="benefit__title" data-i18n="benefits.ben2.title">Better Control</h3>
+                    <p class="benefit__desc" data-i18n="benefits.ben2.desc">Gain full oversight of resources, machinery uptime, and workforce efficiency in one centralized hub.</p>
+                </div>
+
+                <div class="benefit">
+                    <div class="benefit__icon">📋</div>
+                    <h3 class="benefit__title" data-i18n="benefits.ben3.title">Organized Information</h3>
+                    <p class="benefit__desc" data-i18n="benefits.ben3.desc">Ditch the notebooks. All records are digital, searchable, and safe from being misplaced or damaged.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section section--alt">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title" data-i18n="team.title">Meet the Team</h2>
+                <p class="section__subtitle" data-i18n="team.subtitle">Meet the GlitchLab team behind Fabric.</p>
+            </div>
+
+            <div class="team">
+                <div class="team__member">
+                    <div class="team__photo"><img src="fabrizio.jpg" alt="Fabrizio" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=F'"></div>
+                    <h4 class="team__name">Fabrizio</h4>
+                    <p class="team__role" data-i18n="team.role1">Software Engineer</p>
+                </div>
+                <div class="team__member">
+                    <div class="team__photo"><img src="diego.jpg" alt="Diego" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=D'"></div>
+                    <h4 class="team__name">Diego</h4>
+                    <p class="team__role" data-i18n="team.role2">Product Manager</p>
+                </div>
+                <div class="team__member">
+                    <div class="team__photo"><img src="juan.jpg" alt="Juan" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=J'"></div>
+                    <h4 class="team__name">Juan</h4>
+                    <p class="team__role" data-i18n="team.role3">UX/UI Designer</p>
+                </div>
+                <div class="team__member">
+                    <div class="team__photo"><img src="ricardo.jpg" alt="Ricardo" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=R'"></div>
+                    <h4 class="team__name">Ricardo</h4>
+                    <p class="team__role" data-i18n="team.role4">Frontend Developer</p>
+                </div>
+                <div class="team__member">
+                    <div class="team__photo"><img src="rosangela.jpg" alt="Rosangela" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=Ro'"></div>
+                    <h4 class="team__name">Rosangela</h4>
+                    <p class="team__role" data-i18n="team.role5">QA & Testing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container container--narrow">
+            <div class="section__header">
+                <h2 class="section__title" data-i18n="video.title">See how Fabric works in a textile workshop</h2>
+                <p class="section__subtitle" data-i18n="video.subtitle">A short product demo showing the day-to-day operations.</p>
+            </div>
+            <div class="video">
+                <div class="video__play">▶</div>
+                <p class="video__label" data-i18n="video.label">FABRIC PRODUCT DEMO</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="request-demo" class="section section--alt">
+        <div class="container">
+            <div class="demo">
+                <div class="demo__text">
+                    <h2 class="demo__title" data-i18n="form.title">Request a Demo</h2>
+                    <p class="demo__subtitle" data-i18n="form.subtitle">Complete the form to receive personalized information about Fabric.</p>
+                </div>
+                <div class="demo__form-wrap">
+                    <form class="demo__form" onsubmit="event.preventDefault(); alert('Demo requested successfully!');">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="form.name">Name *</label>
+                            <input type="text" required class="form-input" placeholder="John Doe">
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="features" class="py-20 bg-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-16">
-                <h2 class="text-3xl md:text-4xl text-main mb-4" data-i18n="features.title">Key Features</h2>
-                <p class="text-lg text-graytext" data-i18n="features.subtitle">Tools designed to optimize textile production management.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Feature 1 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all transform hover:-translate-y-1 text-center sm:text-left">
-                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto sm:mx-0">
-                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-display text-main mb-2" data-i18n="features.feat1">Production Batch Management</h4>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all transform hover:-translate-y-1 text-center sm:text-left">
-                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto sm:mx-0">
-                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-display text-main mb-2" data-i18n="features.feat2">Quality Control</h4>
-                </div>
-
-                <!-- Feature 3 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all transform hover:-translate-y-1 text-center sm:text-left">
-                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto sm:mx-0">
-                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-display text-main mb-2" data-i18n="features.feat3">Machinery</h4>
-                </div>
-
-                <!-- Feature 4 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-all transform hover:-translate-y-1 text-center sm:text-left">
-                    <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center mb-6 mx-auto sm:mx-0">
-                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                        </svg>
-                    </div>
-                    <h4 class="text-lg font-display text-main mb-2" data-i18n="features.feat4">Reports & Metrics</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="benefits" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl text-main mb-4" data-i18n="benefits.title">Benefits of Fabric</h2>
-                <p class="text-lg text-graytext" data-i18n="benefits.subtitle">Improve your textile processes efficiently.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-                <!-- Benefit 1 -->
-                <div>
-                    <div class="w-20 h-20 mx-auto bg-green-50 rounded-2xl flex items-center justify-center mb-6 rotate-3">
-                        <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-display text-main mb-3" data-i18n="benefits.ben1.title">Better Traceability</h3>
-                    <p class="text-graytext text-sm" data-i18n="benefits.ben1.desc">Track every step of a product's journey to ensure compliance and find roots of defects instantly.</p>
-                </div>
-
-                <!-- Benefit 2 -->
-                <div>
-                    <div class="w-20 h-20 mx-auto bg-green-50 rounded-2xl flex items-center justify-center mb-6 -rotate-3">
-                        <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-display text-main mb-3" data-i18n="benefits.ben2.title">Better Control</h3>
-                    <p class="text-graytext text-sm" data-i18n="benefits.ben2.desc">Gain full oversight of resources, machinery uptime, and workforce efficiency in one centralized hub.</p>
-                </div>
-
-                <!-- Benefit 3 -->
-                <div>
-                    <div class="w-20 h-20 mx-auto bg-green-50 rounded-2xl flex items-center justify-center mb-6 rotate-3">
-                        <svg class="w-10 h-10 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-display text-main mb-3" data-i18n="benefits.ben3.title">Organized Information</h3>
-                    <p class="text-graytext text-sm" data-i18n="benefits.ben3.desc">Ditch the notebooks. All records are digital, searchable, and safe from being misplaced or damaged.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="py-20 bg-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl md:text-4xl text-main mb-4" data-i18n="team.title">Meet the Team</h2>
-                <p class="text-lg text-graytext" data-i18n="team.subtitle">Meet the GlitchLab team behind Fabric.</p>
-            </div>
-            
-            <div class="flex flex-wrap justify-center gap-8 md:gap-12">
-                <!-- Member 1 -->
-                <div class="text-center flex flex-col items-center">
-                    <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md">
-                        <img src="fabrizio.jpg" alt="Fabrizio" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=F'" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-display text-main">Fabrizio</h4>
-                    <p class="text-sm text-graytext" data-i18n="team.role1">Software Engineer</p>
-                </div>
-                
-                <!-- Member 2 -->
-                <div class="text-center flex flex-col items-center">
-                    <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md">
-                        <img src="diego.jpg" alt="Diego" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=D'" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-display text-main">Diego</h4>
-                    <p class="text-sm text-graytext" data-i18n="team.role2">Product Manager</p>
-                </div>
-                
-                <!-- Member 3 -->
-                <div class="text-center flex flex-col items-center">
-                    <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md">
-                        <img src="juan.jpg" alt="Juan" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=J'" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-display text-main">Juan</h4>
-                    <p class="text-sm text-graytext" data-i18n="team.role3">UX/UI Designer</p>
-                </div>
-                
-                <!-- Member 4 -->
-                <div class="text-center flex flex-col items-center">
-                    <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md">
-                        <img src="ricardo.jpg" alt="Ricardo" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=R'" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-display text-main">Ricardo</h4>
-                    <p class="text-sm text-graytext" data-i18n="team.role4">Frontend Developer</p>
-                </div>
-                
-                <!-- Member 5 -->
-                <div class="text-center flex flex-col items-center">
-                    <div class="w-28 h-28 rounded-full overflow-hidden mb-4 border-4 border-white shadow-md">
-                        <img src="rosangela.jpg" alt="Rosangela" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=Ro'" class="w-full h-full object-cover">
-                    </div>
-                    <h4 class="text-lg font-display text-main">Rosangela</h4>
-                    <p class="text-sm text-graytext" data-i18n="team.role5">QA & Testing</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl text-main mb-4" data-i18n="video.title">See how Fabric works in a textile workshop</h2>
-                <p class="text-lg text-graytext" data-i18n="video.subtitle">A short product demo showing the day-to-day operations.</p>
-            </div>
-            
-            <div class="relative w-full aspect-video bg-gray-200 rounded-2xl overflow-hidden shadow-lg flex items-center justify-center group cursor-pointer border border-gray-300">
-                <div class="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors"></div>
-                <div class="text-center z-10 transform group-hover:scale-105 transition-transform">
-                    <div class="w-20 h-20 bg-white/90 backdrop-blur rounded-full flex items-center justify-center mx-auto mb-4 shadow-xl">
-                        <svg class="w-8 h-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"></path>
-                        </svg>
-                    </div>
-                    <p class="font-display font-bold tracking-wider text-main uppercase text-sm" data-i18n="video.label">FABRIC PRODUCT DEMO</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="request-demo" class="py-20 bg-section">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col lg:flex-row gap-16 items-center">
-                <!-- Left Text -->
-                <div class="w-full lg:w-1/2">
-                    <h2 class="text-4xl text-main mb-6" data-i18n="form.title">Request a Demo</h2>
-                    <p class="text-xl text-graytext leading-relaxed" data-i18n="form.subtitle">Complete the form to receive personalized information about Fabric.</p>
-                </div>
-                
-                <!-- Right Form -->
-                <div class="w-full lg:w-1/2">
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 sm:p-10">
-                        <form onsubmit="event.preventDefault(); alert('Demo requested successfully!');" class="space-y-6">
-                            
-                            <div>
-                                <label class="block text-sm font-medium text-main mb-2" data-i18n="form.name">Name *</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-shadow" placeholder="John Doe">
+                        <div class="form-group">
+                            <label class="form-label" data-i18n="form.email">Email *</label>
+                            <input type="email" required class="form-input" placeholder="john@company.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="form.phone">Phone *</label>
+                                <input type="tel" required class="form-input" placeholder="+51 934 567 890">
                             </div>
-
-                            <div>
-                                <label class="block text-sm font-medium text-main mb-2" data-i18n="form.email">Email *</label>
-                                <input type="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-shadow" placeholder="john@company.com">
+                            <div class="form-group">
+                                <label class="form-label" data-i18n="form.company">Company *</label>
+                                <input type="text" required class="form-input" placeholder="Textiles Inc.">
                             </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <label class="block text-sm font-medium text-main mb-2" data-i18n="form.phone">Phone *</label>
-                                    <input type="tel" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-shadow" placeholder="+1 234 567 890">
-                                </div>
-                                <div>
-                                    <label class="block text-sm font-medium text-main mb-2" data-i18n="form.company">Company *</label>
-                                    <input type="text" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-shadow" placeholder="Textiles Inc.">
-                                </div>
-                            </div>
-                            
-                            <button type="submit" class="w-full bg-primary hover:bg-primary-hover text-white font-medium py-4 rounded-lg transition-colors mt-4 text-lg" data-i18n="form.submit">
-                                Submit Request
-                            </button>
-                        </form>
-                    </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full btn--lg" data-i18n="form.submit">Submit Request</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-primary text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-white/10 pb-8 mb-8">
-                <!-- Left -->
-                <div class="text-center md:text-left">
-                    <h3 class="text-2xl font-display font-bold tracking-wider mb-2">FABRIC</h3>
-                    <p class="text-green-100 text-sm" data-i18n="footer.tagline">Smart management for textile production.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">FABRIC</h3>
+                    <p class="footer__tagline" data-i18n="footer.tagline">Smart management for textile production.</p>
                 </div>
-                
-                <!-- Middle -->
-                <div class="text-center">
-                    <div class="flex justify-center space-x-4 text-sm font-medium text-green-100">
-                        <a href="#home" class="hover:text-white transition-colors" data-i18n="nav.home">Home</a>
-                        <span>&middot;</span>
-                        <a href="#features" class="hover:text-white transition-colors" data-i18n="nav.features">Features</a>
-                        <span>&middot;</span>
-                        <a href="#benefits" class="hover:text-white transition-colors" data-i18n="nav.benefits">Benefits</a>
-                        <span>&middot;</span>
-                        <a href="#team" class="hover:text-white transition-colors" data-i18n="nav.team">Team</a>
-                    </div>
+                <div class="footer__links">
+                    <a href="#home" class="footer__link" data-i18n="nav.home">Home</a>
+                    <span>·</span>
+                    <a href="#features" class="footer__link" data-i18n="nav.features">Features</a>
+                    <span>·</span>
+                    <a href="#benefits" class="footer__link" data-i18n="nav.benefits">Benefits</a>
+                    <span>·</span>
+                    <a href="#team" class="footer__link" data-i18n="nav.team">Team</a>
                 </div>
-                
-                <!-- Right -->
-                <div class="text-center md:text-right text-sm text-green-100 flex flex-col items-center md:items-end">
-                    <a href="#" class="hover:text-white transition-colors mb-2" data-i18n="footer.terms">Terms and Conditions</a>
+                <div class="footer__legal">
+                    <a href="#" class="footer__link" data-i18n="footer.terms">Terms and Conditions</a>
                     <p data-i18n="footer.copyright">&copy; 2026 Fabric - GlitchLab</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="i18n.js"></script>
-    <script src="main.js"></script>
+    <script src="assets/i18n/en.js"></script>
+    <script src="assets/i18n/es.js"></script>
+    <script src="assets/i18n/main.js"></script>
 </body>
 </html>
