@@ -287,9 +287,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-family: 'Poppins', sans-serif;
 }
 
-/* ============================================
-   SECCIONES
-   ============================================ */
+/* secciones*/
 .section { padding: 80px 0; }
 .section--alt { background: var(--section); }
 
@@ -321,9 +319,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--graytext);
 }
 
-/* ============================================
-   GRID
-   ============================================ */
+/*grid */
 .grid {
     display: grid;
     gap: 32px;
@@ -332,9 +328,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .grid--4 { grid-template-columns: 1fr; }
 .grid--center { text-align: center; }
 
-/* ============================================
-   CARDS (Problem)
-   ============================================ */
+/* card - problem */
 .card {
     background: var(--white);
     padding: 32px;
@@ -384,9 +378,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     line-height: 1;
 }
 
-/* ============================================
-   SOLUTION CARDS
-   ============================================ */
+/* solution cards*/
 .solution-card {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -451,9 +443,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     text-overflow: ellipsis;
 }
 
-/* ============================================
-   FEATURES
-   ============================================ */
+/* features */
 .feature {
     background: var(--white);
     padding: 24px;
@@ -482,9 +472,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--main);
 }
 
-/* ============================================
-   BENEFITS
-   ============================================ */
+/* benefits */
 .benefit {
     text-align: center;
 }
@@ -509,9 +497,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--graytext);
 }
 
-/* ============================================
-   TEAM
-   ============================================ */
+/*team */
 .team {
     display: flex;
     flex-wrap: wrap;
@@ -537,9 +523,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .team__name { font-size: 18px; }
 .team__role { font-size: 14px; color: var(--graytext); }
 
-/* ============================================
-   VIDEO
-   ============================================ */
+/*Video*/
 .video {
     position: relative;
     width: 100%;
@@ -578,9 +562,7 @@ font-size: 32px;
     color: var(--main);
 }
 
-/* ============================================
-   DEMO / FORM
-   ============================================ */
+/* demo / form */
 .demo {
     display: flex;
     flex-direction: column;
@@ -646,9 +628,7 @@ font-size: 32px;
     box-shadow: 0 0 0 3px rgba(74,85,57,0.15);
 }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/*Footer */
 .footer {
     background: var(--primary);
     color: var(--white);
@@ -702,18 +682,12 @@ font-size: 32px;
     color: #D1FAE5;
 }
 
-/* ============================================
-   RESPONSIVE — TABLET (≥ 640px)
-   ============================================ */
 @media (min-width: 640px) {
     .grid--4 { grid-template-columns: repeat(2, 1fr); }
     .form-row { flex-direction: row; }
     .form-row .form-group { flex: 1; }
 }
 
-/* ============================================
-   RESPONSIVE — DESKTOP (≥ 768px)
-   ============================================ */
 @media (min-width: 768px) {
     .nav__menu { display: flex; }
     .nav__actions { display: flex; }
@@ -749,9 +723,7 @@ font-size: 32px;
     .footer__legal { flex: 1; align-items: flex-end; }
 }
 
-/* ============================================
-   RESPONSIVE — LARGE (≥ 1024px)
-   ============================================ */
+
 @media (min-width: 1024px) {
     .hero__title { font-size: 60px; }
 }
