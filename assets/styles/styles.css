@@ -1,13 +1,3 @@
-/* ============================================
-
-
-   RESET Y BASE
-   ============================================ */
-
-
-
-
-/* Botón hamburguesa */
 .nav__burger {
     display: flex;
     flex-direction: column;
@@ -30,7 +20,6 @@
     transition: transform var(--transition), opacity var(--transition);
 }
 
-/* Estado abierto: la X */
 .nav__burger.is-open span:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
 }
@@ -41,7 +30,6 @@
     transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Menú móvil: oculto por defecto */
 .nav__mobile {
     display: none;
     flex-direction: column;
@@ -53,7 +41,6 @@
     display: flex;
 }
 
-/* En desktop, el menú móvil nunca se muestra */
 @media (min-width: 768px) {
     .nav__mobile { display: none !important; }
     .nav__burger { display: none; }
@@ -118,9 +105,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .container--narrow { max-width: 900px; }
 
-/* ============================================
-   NAV
-   ============================================ */
+/*div*/
 .nav {
     position: fixed;
     top: 0;
@@ -192,9 +177,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding-top: 12px;
 }
 
-/* ============================================
-   LANG TOGGLE
-   ============================================ */
+/*lan toggle*/
 .lang-toggle {
     display: flex;
     align-items: center;
@@ -221,9 +204,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--white);
 }
 
-/* ============================================
-   BOTONES
-   ============================================ */
+/*Botones */
 .btn {
     display: inline-block;
     font-weight: 500;
@@ -244,9 +225,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn--lg { padding: 16px 32px; font-size: 17px; }
 .btn--full { width: 100%; }
 
-/* ============================================
-   HERO
-   ============================================ */
+/*Hero*/
 .hero { padding: 128px 0 80px; }
 .hero__inner {
     display: flex;
