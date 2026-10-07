@@ -966,3 +966,44 @@ font-size: 32px;
 @media (min-width: 1024px) {
     .hero__title { font-size: 60px; }
 }
+
+.about-team {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #E5E7EB;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    transition: background var(--transition);
+}
+
+.about-team:hover {
+    background: #D1D5DB;
+}
+
+.about-team__icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.about-team__label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: var(--main);
+}
