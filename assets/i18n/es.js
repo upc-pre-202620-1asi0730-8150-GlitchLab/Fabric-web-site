@@ -108,7 +108,7 @@ window.translations['es'] = {
         'appInfo.title': 'Conoce Fabric en Acción',
         'appInfo.pitch': 'Nuestra plataforma te brinda control total sobre tu producción textil. Supervisa a los operarios, gestiona la calidad y optimiza cada etapa con una interfaz intuitiva diseñada específicamente para talleres MYPE.',
 
-        'appInfo.dash': 'Dashboard',
+        'appInfo.dash': 'Reportes y Análisis',
         'appInfo.prod': 'Lotes de Producción',
         'appInfo.qual': 'Control de Calidad',
         'appInfo.mach': 'Maquinaria',

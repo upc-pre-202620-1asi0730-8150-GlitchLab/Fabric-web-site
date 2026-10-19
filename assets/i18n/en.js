@@ -109,7 +109,7 @@ window.translations['en'] = {
         'appInfo.title': 'See Fabric in Action',
         'appInfo.pitch': 'Our platform gives you total control over your textile production. Supervise operators, manage quality, and optimize every stage with an intuitive interface designed specifically for MYPE workshops.',
 
-        'appInfo.dash': 'Dashboard',
+        'appInfo.dash': 'Reports and Analysis',
         'appInfo.prod': 'Production Batches',
         'appInfo.qual': 'Quality Control',
         'appInfo.mach': 'Machinery',
