@@ -139,5 +139,6 @@ window.translations['en'] = {
         'footer.phone': 'Phone: +51 935 598 887',
         'footer.socialTitle': 'Follow Us',
         'footer.terms': 'Terms and Conditions',
+        'footer.privacy': 'Privacy Policy',
         'footer.copyright': '© 2026 Fabric - GlitchLab'
 }
