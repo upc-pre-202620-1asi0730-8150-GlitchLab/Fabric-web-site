@@ -115,7 +115,7 @@ window.translations['en'] = {
         'appInfo.mach': 'Machinery',
         'appInfo.alert': 'Alerts',
         'cta.title': 'Take your workshop to the next level!',
-        'cta.subtitle': 'Join the textile workshops that are already optimizing their production and reducing errors. Digitize your control today.',
+        'cta.subtitle': 'Manage production, quality, and traceability in one place. Reduce errors, spot issues earlier, and make decisions with clear operational data.',
         'cta.btn': 'Start App',
 
         'team.title': 'Meet the Team',

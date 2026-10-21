@@ -114,7 +114,7 @@ window.translations['es'] = {
         'appInfo.mach': 'Maquinaria',
         'appInfo.alert': 'Alertas',
         'cta.title': '¡Lleva tu taller al siguiente nivel!',
-        'cta.subtitle': 'Únete a los talleres textiles que ya están optimizando su producción y reduciendo errores. Digitaliza tu control hoy mismo.',
+        'cta.subtitle': 'Controla producción, calidad y trazabilidad desde un solo lugar. Reduce errores, detecta problemas a tiempo y toma decisiones con datos claros.',
         'cta.btn': 'Iniciar Aplicación',
 
         'team.title': 'Conoce al Equipo',
