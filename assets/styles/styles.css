@@ -1472,8 +1472,14 @@ html { scroll-padding-top: 84px; }
     }
 
     .footer__links {
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         gap: 12px;
+    }
+
+    .footer__links a {
+        text-decoration: none;
     }
 
     .footer__contact p {
