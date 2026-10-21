@@ -1404,3 +1404,108 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
         font-size: 22px;
     }
 }
+/* Responsive finishing: landing page, CTA, team and contact footer */
+html { scroll-padding-top: 84px; }
+.container { width: 100%; }
+.hero__inner { align-items: center; }
+.hero__media, .hero__text { min-width: 0; }
+.cta-banner { width: 100%; padding: clamp(28px, 5vw, 64px) clamp(18px, 4vw, 32px); }
+.cta-banner__title { font-size: clamp(24px, 4vw, 36px); overflow-wrap: anywhere; }
+.cta-banner__subtitle { font-size: clamp(15px, 2vw, 18px); }
+.footer__top { align-items: start; }
+.footer__contact a { overflow-wrap: anywhere; }
+.social-icons { display: flex; flex-wrap: wrap; gap: 12px; }
+.social-icons a { flex: 0 0 auto; }
+.team__member, .plan, .feature-card, .benefit-card { min-width: 0; }
+
+@media (max-width: 767px) {
+    .container { padding-left: 18px; padding-right: 18px; }
+    .hero { padding: 104px 0 48px; }
+    .hero__inner { flex-direction: column; gap: 28px; }
+    .hero__text, .hero__media { width: 100%; }
+    .hero__title { font-size: clamp(30px, 8vw, 42px); line-height: 1.15; }
+    .hero__subtitle { font-size: 16px; }
+    .hero__img { width: 100%; height: auto; object-fit: contain; }
+    .section { padding-top: 52px; padding-bottom: 52px; }
+    .section__title { font-size: clamp(25px, 6vw, 34px); }
+    .section__subtitle { font-size: 15px; }
+    .cta-banner { border-radius: 12px; }
+    .cta-banner .btn { max-width: 100%; white-space: normal; }
+    .footer__top { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 20px; }
+    .footer__brand, .footer__contact { min-width: 0; }
+    .footer__bottom { flex-wrap: wrap; gap: 12px; text-align: center; }
+}
+@media (max-width: 480px) {
+    .container { padding-left: 16px; padding-right: 16px; }
+    .hero { padding-top: 92px; }
+    .hero__title { font-size: 30px; }
+    .btn--lg { padding: 13px 18px; font-size: 14px; }
+    .footer__top { grid-template-columns: minmax(0, 1fr); }
+    .footer__links { display: flex; flex-wrap: wrap; gap: 10px 16px; }
+    .footer__contact p { overflow-wrap: anywhere; }
+    .team { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 14px; }
+    .team__photo img { max-width: 100%; height: auto; }
+}
+
+/* Mobile footer alignment fix */
+@media (max-width: 767px) {
+    .footer {
+        padding: 42px 0 28px;
+    }
+
+    .footer__top {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        align-items: start;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .footer__brand,
+    .footer__links,
+    .footer__contact,
+    .footer__social {
+        width: 100%;
+        min-width: 0;
+        text-align: center;
+    }
+
+    .footer__links {
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer__contact p {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 4px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
+    }
+
+    .footer__contact p a {
+        overflow-wrap: anywhere;
+    }
+
+    .social-icons {
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .footer__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer__bottom p {
+        margin: 0;
+    }
+}
