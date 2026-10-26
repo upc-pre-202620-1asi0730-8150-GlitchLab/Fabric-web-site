@@ -9,17 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="assets/styles/styles.css">
+
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
 
 <nav class="nav">
-
     <div class="container nav__inner">
-
         <div class="nav__logo">
-            <img src="assets/images/logo/fabric-logo.png"
-                 alt="Fabric Logo">
+            <img src="assets/images/logo/fabric-logo.png" alt="Fabric Logo">
         </div>
 
         <div class="nav__menu">
@@ -46,22 +49,16 @@
         </div>
 
         <div class="nav__mobile-controls">
-
             <div class="nav__mobile-top-lang">
                 <button class="lang-btn-mob active" data-lang="en">EN</button>
                 <button class="lang-btn-mob" data-lang="es">ES</button>
             </div>
-
-            <button class="nav__burger"
-                    id="mobile-menu-btn"
-                    aria-label="Menu">
+            <button class="nav__burger" id="mobile-menu-btn" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
         </div>
-
     </div>
 
     <div class="nav__mobile" id="mobile-menu">
@@ -71,401 +68,423 @@
         <a href="#features" class="nav__mobile-link" data-i18n="nav.features">Features</a>
         <a href="#team" class="nav__mobile-link" data-i18n="nav.team">Team</a>
     </div>
-
 </nav>
 
-    <section id="home" class="hero">
-        <div class="container hero__inner">
-            <div class="hero__text">
-                <h1 class="hero__title" data-i18n="hero.title">Manage your textile production with clarity.</h1>
-                <p class="hero__subtitle" data-i18n="hero.subtitle">Manage production, quality, and traceability all in one place.</p>
-                <a href="#request-demo" class="btn btn--primary btn--lg" data-i18n="hero.btn">Request a Demo</a>
+<section id="home" class="hero">
+    <div class="container hero__inner">
+        <div class="hero__text">
+            <h1 class="hero__title" data-i18n="hero.title">Manage your textile production with clarity.</h1>
+            <p class="hero__subtitle" data-i18n="hero.subtitle">Manage production, quality, and traceability all in one place.</p>
+            <a href="#cta" class="btn btn--primary btn--lg" data-i18n="hero.btn">Start App</a>
+        </div>
+
+        <div class="hero__media">
+            <img src="assets/images/hero/textil.webp" alt="Fabric Dashboard Preview" class="hero__img">
+        </div>
+    </div>
+</section>
+
+<section id="problem" class="section section--alt">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" data-i18n="problem.title">Problem</h2>
+            <p class="section__subtitle" data-i18n="problem.subtitle">Textile production is difficult to control when information is scattered.</p>
+        </div>
+
+        <div class="grid grid--3">
+            <div class="card">
+                <div class="card__icon">
+                    <img src="assets/images/icons/supervisor.png" alt="Production Icon" class="card__icon-img">
+                </div>
+                <h3 class="card__title" data-i18n="problem.card1.title">Production Supervisor</h3>
+                <p class="card__quote" data-i18n="problem.card1.q">"Where is the batch?"</p>
+                <ul class="card__list">
+                    <li data-i18n="problem.card1.li1">Scattered WhatsApp messages and Excel sheets.</li>
+                    <li data-i18n="problem.card1.li2">Manual tracking leads to lost information.</li>
+                    <li data-i18n="problem.card1.li3">Bottlenecks are hard to identify in real-time.</li>
+                </ul>
             </div>
 
-            <div class="hero__media">
-                <img src="assets/images/hero/textile.webp" alt="Fabric Dashboard Preview" class="hero__img">
+            <div class="card">
+                <div class="card__icon">
+                    <img src="assets/images/icons/check.png" alt="Quality Icon" class="card__icon-img">
+                </div>
+                <h3 class="card__title" data-i18n="problem.card2.title">Quality Manager</h3>
+                <p class="card__quote" data-i18n="problem.card2.q">"Where did the defect come from?"</p>
+                <ul class="card__list">
+                    <li data-i18n="problem.card2.li1">Lack of traceability per machine and operator.</li>
+                    <li data-i18n="problem.card2.li2">High rework rates due to late detections.</li>
+                    <li data-i18n="problem.card2.li3">Paper-based quality logs are easily misplaced.</li>
+                </ul>
+            </div>
 
+            <div class="card">
+                <div class="card__icon">
+                    <img src="assets/images/icons/tower.png" alt="Owner Icon" class="card__icon-img">
+                </div>
+                <h3 class="card__title" data-i18n="problem.card3.title">MYPE Owner</h3>
+                <p class="card__quote" data-i18n="problem.card3.q">"What is affecting my operation?"</p>
+                <ul class="card__list">
+                    <li data-i18n="problem.card3.li1">No clear metrics on productivity or waste.</li>
+                    <li data-i18n="problem.card3.li2">Difficult to make decisions without reliable data.</li>
+                    <li data-i18n="problem.card3.li3">Margins shrink due to unseen inefficiencies.</li>
+                </ul>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="problem" class="section section--alt">
-        <div class="container">
+<section id="solution" class="section">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__eyebrow" data-i18n="solution.label">SOLUTION</h2>
+            <p class="section__title section__title--lg" data-i18n="solution.title">Fabric connects the information behind every operation.</p>
+        </div>
+
+        <div class="grid grid--3">
+            <div class="solution-card">
+                <h3 class="solution-card__title" data-i18n="solution.card1.title">Production Tracking</h3>
+                <div class="solution-card__body">
+                    <div class="solution-block solution-block--problem">
+                        <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
+                        <span data-i18n="solution.card1.prob">Manual tracing, scattered reports.</span>
+                    </div>
+                    <div class="solution-block solution-block--fabric">
+                        <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
+                        <span data-i18n="solution.card1.sol">Digital batch tracking in real-time.</span>
+                    </div>
+                </div>
+                <div class="solution-card__tag">
+                    <span data-i18n="solution.card1.tag">Batch → Stage → Quantity → History</span>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="solution-card__title" data-i18n="solution.card2.title">Quality Control</h3>
+                <div class="solution-card__body">
+                    <div class="solution-block solution-block--problem">
+                        <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
+                        <span data-i18n="solution.card2.prob">Late detections, unrecorded defects.</span>
+                    </div>
+                    <div class="solution-block solution-block--fabric">
+                        <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
+                        <span data-i18n="solution.card2.sol">Standardized digital inspection forms.</span>
+                    </div>
+                </div>
+                <div class="solution-card__tag">
+                    <span data-i18n="solution.card2.tag">Inspection → Defect → Rework / Waste</span>
+                </div>
+            </div>
+
+            <div class="solution-card">
+                <h3 class="solution-card__title" data-i18n="solution.card3.title">Operational Visibility</h3>
+                <div class="solution-card__body">
+                    <div class="solution-block solution-block--problem">
+                        <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
+                        <span data-i18n="solution.card3.prob">Blind spots in production speed.</span>
+                    </div>
+                    <div class="solution-block solution-block--fabric">
+                        <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
+                        <span data-i18n="solution.card3.sol">Centralized dashboards and KPIs.</span>
+                    </div>
+                </div>
+                <div class="solution-card__tag">
+                    <span data-i18n="solution.card3.tag">Data → Visibility → Decisions</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features" class="section section--alt">
+    <div class="container">
+        <div class="section__header section__header--left">
+            <h2 class="section__title" data-i18n="features.title">Key Features</h2>
+            <p class="section__subtitle" data-i18n="features.subtitle">Tools designed to optimize textile production management.</p>
+        </div>
+
+        <div class="grid grid--4">
+            <div class="feature">
+                <div class="feature__icon">
+                    <img src="assets/images/icons/caja.png" alt="Caja Icon" class="feature__icon-img">
+                </div>
+                <h4 class="feature__title" data-i18n="features.feat1">Production Batch Management</h4>
+            </div>
+
+            <div class="feature">
+                <div class="feature__icon">
+                    <img src="assets/images/icons/check.png" alt="Check icon" class="feature__icon-img">
+                </div>
+                <h4 class="feature__title" data-i18n="features.feat2">Quality Control</h4>
+            </div>
+
+            <div class="feature">
+                <div class="feature__icon">
+                    <img src="assets/images/icons/machinery.png" alt="Machinery Icon" class="feature__icon-img">
+                </div>
+                <h4 class="feature__title" data-i18n="features.feat3">Machinery</h4>
+            </div>
+
+            <div class="feature">
+                <div class="feature__icon">
+                    <img src="assets/images/icons/metrics.png" alt="Metrics Icon" class="feature__icon-img">
+                </div>
+                <h4 class="feature__title" data-i18n="features.feat4">Reports & Metrics</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="benefits" class="section">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" data-i18n="benefits.title">Benefits of Fabric</h2>
+            <p class="section__subtitle" data-i18n="benefits.subtitle">Improve your textile processes efficiently.</p>
+        </div>
+
+        <div class="grid grid--3 grid--center">
+            <div class="benefit">
+                <div class="benefit__icon">
+                    <img src="assets/images/icons/lupa.png" alt="Lupa Icon" class="benefit__icon-img">
+                </div>
+                <h3 class="benefit__title" data-i18n="benefits.ben1.title">Better Traceability</h3>
+                <p class="benefit__desc" data-i18n="benefits.ben1.desc">Track every step of a product's journey to ensure compliance and find roots of defects instantly.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit__icon">
+                    <img src="assets/images/icons/machinery.png" alt="Eye Icon" class="benefit__icon-img">
+                </div>
+                <h3 class="benefit__title" data-i18n="benefits.ben2.title">Better Control</h3>
+                <p class="benefit__desc" data-i18n="benefits.ben2.desc">Gain full oversight of resources, machinery uptime, and workforce efficiency in one centralized hub.</p>
+            </div>
+
+            <div class="benefit">
+                <div class="benefit__icon">
+                    <img src="assets/images/icons/mesa.png" alt="Organization Icon" class="benefit__icon-img">
+                </div>
+                <h3 class="benefit__title" data-i18n="benefits.ben3.title">Organized Information</h3>
+                <p class="benefit__desc" data-i18n="benefits.ben3.desc">Ditch the notebooks. All records are digital, searchable, and safe from being misplaced or damaged.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="app-info" class="section section--alt">
+    <div class="container text-center">
+        <div class="section__header">
+            <h2 class="section__title" data-i18n="appInfo.title">See Fabric in Action</h2>
+            <p class="section__subtitle" data-i18n="appInfo.pitch">Our platform gives you total control over your textile production. Supervise operators, manage quality, and optimize every stage with an intuitive interface designed specifically for MYPE workshops.</p>
+        </div>
+
+        <div class="app-screenshots-grid">
+            <div class="screenshot-wrapper screen-dash">
+                <h4 data-i18n="appInfo.dash">Main Dashboard</h4>
+                <img src="assets/images/screenshots/app-dashboard.png" alt="Fabric Dashboard" class="app-screenshot">
+            </div>
+
+            <div class="screenshot-wrapper screen-prod">
+                <h4 data-i18n="appInfo.prod">Production Batches</h4>
+                <img src="assets/images/screenshots/app-production.png" alt="Production Batches" class="app-screenshot">
+            </div>
+
+            <div class="screenshot-wrapper screen-qual">
+                <h4 data-i18n="appInfo.qual">Quality Control</h4>
+                <img src="assets/images/screenshots/app-quality.png" alt="Quality Control" class="app-screenshot">
+            </div>
+
+            <div class="screenshot-wrapper screen-mach">
+                <h4 data-i18n="appInfo.mach">Machinery</h4>
+                <img src="assets/images/screenshots/app-machinery.png" alt="Machinery" class="app-screenshot">
+            </div>
+
+            <div class="screenshot-wrapper screen-alert">
+                <h4 data-i18n="appInfo.alert">Alerts</h4>
+                <img src="assets/images/screenshots/app-alerts.png" alt="Alerts" class="app-screenshot">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container container--narrow">
+        <div class="section__header">
+            <h2 class="section__title" data-i18n="video.title">See how Fabric works in a textile workshop</h2>
+            <p class="section__subtitle" data-i18n="video.subtitle">A short product demo showing the day-to-day operations.</p>
+        </div>
+        <div class="video">
+            <div class="video__play">▶</div>
+            <p class="video__label" data-i18n="video.label">FABRIC PRODUCT DEMO</p>
+        </div>
+    </div>
+</section>
+
+<section id="   plans" class="section section--alt">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" data-i18n="plans.title">Plans for every workshop</h2>
+            <p class="section__subtitle" data-i18n="plans.subtitle">Choose the plan that fits the size of your production.</p>
+        </div>
+
+        <div class="grid grid--3">
+            <div class="plan">
+                <h3 class="plan__name" data-i18n="plans.starter.name">Starter</h3>
+                <p class="plan__desc" data-i18n="plans.starter.desc">For small workshops taking their first step into digital tracking.</p>
+                <div class="plan__price">
+                    <span class="plan__price-amount" data-i18n="plans.starter.price">S/ 59</span>
+                    <span class="plan__price-period" data-i18n="plans.starter.period">/ month</span>
+                </div>
+                <ul class="plan__features">
+                    <li data-i18n="plans.starter.f1">Up to 2 active production batches</li>
+                    <li data-i18n="plans.starter.f2">Basic machinery registry</li>
+                    <li data-i18n="plans.starter.f3">1 user account</li>
+                    <li data-i18n="plans.starter.f4">Email support</li>
+                </ul>
+                <button type="button" class="btn btn--primary btn--full plan__buy" data-i18n="plans.starter.cta">Get Started</button>
+            </div>
+
+            <div class="plan plan--featured">
+                <span class="plan__badge" data-i18n="plans.growth.badge">MOST POPULAR</span>
+                <h3 class="plan__name" data-i18n="plans.growth.name">Growth</h3>
+                <p class="plan__desc" data-i18n="plans.growth.desc">For MYPEs ready to scale production with full traceability.</p>
+                <div class="plan__price">
+                    <span class="plan__price-amount" data-i18n="plans.growth.price">S/ 149</span>
+                    <span class="plan__price-period" data-i18n="plans.growth.period">/ month</span>
+                </div>
+                <ul class="plan__features">
+                    <li data-i18n="plans.growth.f1">Unlimited production batches</li>
+                    <li data-i18n="plans.growth.f2">Full machinery &amp; maintenance tracking</li>
+                    <li data-i18n="plans.growth.f3">Quality control &amp; defect traceability</li>
+                    <li data-i18n="plans.growth.f4">Up to 10 user accounts</li>
+                    <li data-i18n="plans.growth.f5">Priority support</li>
+                </ul>
+                <button type="button" class="btn btn--primary btn--full plan__buy" data-i18n="plans.growth.cta">Start App</button>
+            </div>
+
+            <div class="plan">
+                <h3 class="plan__name" data-i18n="plans.enterprise.name">Enterprise</h3>
+                <p class="plan__desc" data-i18n="plans.enterprise.desc">For larger operations that need custom metrics and integrations.</p>
+                <div class="plan__price">
+                    <span class="plan__price-amount" data-i18n="plans.enterprise.price">Custom</span>
+                </div>
+                <ul class="plan__features">
+                    <li data-i18n="plans.enterprise.f1">Everything in Growth</li>
+                    <li data-i18n="plans.enterprise.f2">Custom dashboards &amp; reports</li>
+                    <li data-i18n="plans.enterprise.f3">Unlimited user accounts</li>
+                    <li data-i18n="plans.enterprise.f4">Dedicated account manager</li>
+                </ul>
+                <button type="button" class="btn btn--primary btn--full plan__buy" data-i18n="plans.enterprise.cta">Contact Sales</button>
+            </div>
+        </div>
+        <div id="plan-success" class="plan-success" role="status" aria-live="polite" hidden></div>
+    </div>
+</section>
+
+
+
+<section id="cta" class="section">
+    <div class="container">
+        <div class="cta-banner">
+            <h2 class="cta-banner__title" data-i18n="cta.title">Take your workshop to the next level!</h2>
+            <p class="cta-banner__subtitle" data-i18n="cta.subtitle">Join the textile workshops that are already optimizing their production and reducing errors. Digitize your control today.</p>
+            <a href="https://hola-c9301.web.app/dashboard" target="_blank" class="btn btn--primary btn--lg" data-i18n="cta.btn">Start App</a>
+        </div>
+    </div>
+</section>
+
+<section id="team" class="section section--alt">
+    <div class="container">
+        <div class="section__header">
+            <h2 class="section__title" data-i18n="team.title">Meet the Team</h2>
+            <p class="section__subtitle" data-i18n="team.subtitle">Meet the GlitchLab team behind Fabric.</p>
+        </div>
+
+        <div class="team">
+            <div class="team__member">
+                <div class="team__photo"><img src="assets/team_members/fabrizio.png" alt="Fabrizio" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=F'"></div>
+                <h4 class="team__name">Fabrizio</h4>
+                <p class="team__role" data-i18n="team.role1">Software Engineer</p>
+            </div>
+            <div class="team__member">
+                <div class="team__photo"><img src="assets/team_members/Diego.jpg" alt="Diego" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=D'"></div>
+                <h4 class="team__name">Diego</h4>
+                <p class="team__role" data-i18n="team.role2">Product Manager</p>
+            </div>
+            <div class="team__member">
+                <div class="team__photo"><img src="assets/team_members/juan.jpg" alt="Juan" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=J'"></div>
+                <h4 class="team__name">Juan</h4>
+                <p class="team__role" data-i18n="team.role3">UX/UI Designer</p>
+            </div>
+            <div class="team__member">
+                <div class="team__photo"><img src="assets/team_members/ricardo.png" alt="Ricardo" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=R'"></div>
+                <h4 class="team__name">Ricardo</h4>
+                <p class="team__role" data-i18n="team.role4">Frontend Developer</p>
+            </div>
+        </div>
+
+        <div class="container container--narrow" style="margin-top: 80px;">
             <div class="section__header">
-                <h2 class="section__title" data-i18n="problem.title">Problem</h2>
-                <p class="section__subtitle" data-i18n="problem.subtitle">Textile production is difficult to control when information is scattered.</p>
+                <h2 class="section__title" data-i18n="aboutTeam.title">About the Team</h2>
+                <p class="section__subtitle" data-i18n="aboutTeam.subtitle">Learn more about the team behind Fabric.</p>
             </div>
 
-            <div class="grid grid--3">
-                <div class="card">
-                    <div class="card__icon">
-                        <img src="assets/images/icons/supervisor.png" alt="Production Icon" class="card__icon-img">
-                    </div>
-                    <h3 class="card__title" data-i18n="problem.card1.title">Production Supervisor</h3>
-                    <p class="card__quote" data-i18n="problem.card1.q">"Where is the batch?"</p>
-                    <ul class="card__list">
-                        <li data-i18n="problem.card1.li1">Scattered WhatsApp messages and Excel sheets.</li>
-                        <li data-i18n="problem.card1.li2">Manual tracking leads to lost information.</li>
-                        <li data-i18n="problem.card1.li3">Bottlenecks are hard to identify in real-time.</li>
-                    </ul>
-                </div>
+            <div class="about-team">
+                <div class="about-team__icon">▶</div>
+                <p class="about-team__label" data-i18n="aboutTeam.label">ABOUT THE TEAM</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-                <div class="card">
-                    <div class="card__icon">
-                        <img src="assets/images/icons/check.png" alt="Quality Icon" class="card__icon-img">
-                    </div>
-                    <h3 class="card__title" data-i18n="problem.card2.title">Quality Manager</h3>
-                    <p class="card__quote" data-i18n="problem.card2.q">"Where did the defect come from?"</p>
-                    <ul class="card__list">
-                        <li data-i18n="problem.card2.li1">Lack of traceability per machine and operator.</li>
-                        <li data-i18n="problem.card2.li2">High rework rates due to late detections.</li>
-                        <li data-i18n="problem.card2.li3">Paper-based quality logs are easily misplaced.</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <div class="card__icon">
-                        <img src="assets/images/icons/tower.png" alt="Owner Icon" class="card__icon-img">
-                    </div>
-                    <h3 class="card__title" data-i18n="problem.card3.title">MYPE Owner</h3>
-                    <p class="card__quote" data-i18n="problem.card3.q">"What is affecting my operation?"</p>
-                    <ul class="card__list">
-                        <li data-i18n="problem.card3.li1">No clear metrics on productivity or waste.</li>
-                        <li data-i18n="problem.card3.li2">Difficult to make decisions without reliable data.</li>
-                        <li data-i18n="problem.card3.li3">Margins shrink due to unseen inefficiencies.</li>
-                    </ul>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <h3 class="footer__logo">FABRIC</h3>
+                <p class="footer__tagline" data-i18n="footer.tagline">Smart management for textile production.</p>
+            </div>
+            <div class="footer__links">
+                <a href="#home" class="footer__link" data-i18n="nav.home">Home</a>
+                <a href="#features" class="footer__link" data-i18n="nav.features">Features</a>
+                <a href="#benefits" class="footer__link" data-i18n="nav.benefits">Benefits</a>
+                <a href="#team" class="footer__link" data-i18n="nav.team">Team</a>
+            </div>
+            <div class="footer__contact">
+                <h4 data-i18n="footer.contactTitle">Contact Information</h4>
+                <p data-i18n="footer.address">Address: Lima, Peru</p>
+                <p><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@fabric-app.com" data-i18n="footer.email">Correo: contacto@fabric-app.com</a></p>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+51935598887" data-i18n="footer.phone">Teléfono: +51 935 598 887</a></p>
+            </div>
+            <div class="footer__social">
+                <h4 data-i18n="footer.socialTitle">Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/51935598887" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section id="solution" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__eyebrow" data-i18n="solution.label">SOLUTION</h2>
-                <p class="section__title section__title--lg" data-i18n="solution.title">Fabric connects the information behind every operation.</p>
+        <div class="footer__bottom">
+            <div class="footer__legal-links">
+                <a href="terms.html" class="footer__link" data-i18n="footer.terms">Terms and Conditions</a>
+                <a href="privacy-policy.html" class="footer__link" data-i18n="footer.privacy">Privacy Policy</a>
             </div>
-
-            <div class="grid grid--3">
-                <div class="solution-card">
-                    <h3 class="solution-card__title" data-i18n="solution.card1.title">Production Tracking</h3>
-                    <div class="solution-card__body">
-                        <div class="solution-block solution-block--problem">
-                            <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
-                            <span data-i18n="solution.card1.prob">Manual tracing, scattered reports.</span>
-                        </div>
-                        <div class="solution-block solution-block--fabric">
-                            <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
-                            <span data-i18n="solution.card1.sol">Digital batch tracking in real-time.</span>
-                        </div>
-                    </div>
-                    <div class="solution-card__tag">
-                        <span data-i18n="solution.card1.tag">Batch → Stage → Quantity → History</span>
-                    </div>
-                </div>
-
-                <div class="solution-card">
-                    <h3 class="solution-card__title" data-i18n="solution.card2.title">Quality Control</h3>
-                    <div class="solution-card__body">
-                        <div class="solution-block solution-block--problem">
-                            <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
-                            <span data-i18n="solution.card2.prob">Late detections, unrecorded defects.</span>
-                        </div>
-                        <div class="solution-block solution-block--fabric">
-                            <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
-                            <span data-i18n="solution.card2.sol">Standardized digital inspection forms.</span>
-                        </div>
-                    </div>
-                    <div class="solution-card__tag">
-                        <span data-i18n="solution.card2.tag">Inspection → Defect → Rework / Waste</span>
-                    </div>
-                </div>
-
-                <div class="solution-card">
-                    <h3 class="solution-card__title" data-i18n="solution.card3.title">Operational Visibility</h3>
-                    <div class="solution-card__body">
-                        <div class="solution-block solution-block--problem">
-                            <span class="solution-block__label solution-block__label--problem" data-i18n="solution.problem_label">PROBLEM</span>
-                            <span data-i18n="solution.card3.prob">Blind spots in production speed.</span>
-                        </div>
-                        <div class="solution-block solution-block--fabric">
-                            <span class="solution-block__label solution-block__label--fabric" data-i18n="solution.fabric_label">FABRIC SOLUTION</span>
-                            <span data-i18n="solution.card3.sol">Centralized dashboards and KPIs.</span>
-                        </div>
-                    </div>
-                    <div class="solution-card__tag">
-                        <span data-i18n="solution.card3.tag">Data → Visibility → Decisions</span>
-                    </div>
-                </div>
-            </div>
+            <p data-i18n="footer.copyright">&copy; 2026 Fabric - GlitchLab</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <section id="features" class="section section--alt">
-        <div class="container">
-            <div class="section__header section__header--left">
-                <h2 class="section__title" data-i18n="features.title">Key Features</h2>
-                <p class="section__subtitle" data-i18n="features.subtitle">Tools designed to optimize textile production management.</p>
-            </div>
-
-            <div class="grid grid--4">
-                <div class="feature">
-                    <div class="feature__icon">
-                        <img src="assets/images/icons/box.png" alt="Box Icon" class="feature__icon-img">
-                    </div>
-                    <h4 class="feature__title" data-i18n="features.feat1">Production Batch Management</h4>
-                </div>
-
-                <div class="feature">
-                    <div class="feature__icon">
-                        <img src="assets/images/icons/check.png" alt="Check icon" class="feature__icon-img">
-                    </div>
-                    <h4 class="feature__title" data-i18n="features.feat2">Quality Control</h4>
-                </div>
-
-                <div class="feature">
-                    <div class="feature__icon">
-                        <img src="assets/images/icons/machinery.png" alt="Machinery Icon" class="feature__icon-img">  
-                    </div>
-                    <h4 class="feature__title" data-i18n="features.feat3">Machinery</h4>
-                </div>
-
-                <div class="feature">
-                    <div class="feature__icon">
-                        <img src="assets/images/icons/metrics.png" alt="Metrics Icon" class="feature__icon-img">
-                    </div>
-                    <h4 class="feature__title" data-i18n="features.feat4">Reports & Metrics</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="benefits" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title" data-i18n="benefits.title">Benefits of Fabric</h2>
-                <p class="section__subtitle" data-i18n="benefits.subtitle">Improve your textile processes efficiently.</p>
-            </div>
-
-            <div class="grid grid--3 grid--center">
-                <div class="benefit">
-                    <div class="benefit__icon">
-                        <img src="assets/images/icons/magnifier.png" alt="Magnifier Icon" class="benefit__icon-img">
-                    </div>
-                    <h3 class="benefit__title" data-i18n="benefits.ben1.title">Better Traceability</h3>
-                    <p class="benefit__desc" data-i18n="benefits.ben1.desc">Track every step of a product's journey to ensure compliance and find roots of defects instantly.</p>
-                </div>
-
-                <div class="benefit">
-                    <div class="benefit__icon">
-                        <img src="assets/images/icons/machinery.png" alt="Eye Icon" class="benefit__icon-img">
-                    </div>
-                    <h3 class="benefit__title" data-i18n="benefits.ben2.title">Better Control</h3>
-                    <p class="benefit__desc" data-i18n="benefits.ben2.desc">Gain full oversight of resources, machinery uptime, and workforce efficiency in one centralized hub.</p>
-                </div>
-
-                <div class="benefit">
-                    <div class="benefit__icon">
-                        <img src="assets/images/icons/table.png" alt="Organization Icon" class="benefit__icon-img">
-                    </div>
-                    <h3 class="benefit__title" data-i18n="benefits.ben3.title">Organized Information</h3>
-                    <p class="benefit__desc" data-i18n="benefits.ben3.desc">Ditch the notebooks. All records are digital, searchable, and safe from being misplaced or damaged.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="team" class="section section--alt">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title" data-i18n="team.title">Meet the Team</h2>
-                <p class="section__subtitle" data-i18n="team.subtitle">Meet the GlitchLab team behind Fabric.</p>
-            </div>
-
-            <div class="team">
-                <div class="team__member">
-                    <div class="team__photo"><img src="assets/team_members/fabrizio.png" alt="Fabrizio" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=F'"></div>
-                    <h4 class="team__name">Fabrizio</h4>
-                    <p class="team__role" data-i18n="team.role1">Software Engineer</p>
-                </div>
-                <div class="team__member">
-                    <div class="team__photo"><img src="assets/team_members/diego.jpg" alt="Diego" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=D'"></div>
-                    <h4 class="team__name">Diego</h4>
-                    <p class="team__role" data-i18n="team.role2">Product Manager</p>
-                </div>
-                <div class="team__member">
-                    <div class="team__photo"><img src="assets/team_members/juan.jpg" alt="Juan" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=J'"></div>
-                    <h4 class="team__name">Juan</h4>
-                    <p class="team__role" data-i18n="team.role3">UX/UI Designer</p>
-                </div>
-                <div class="team__member">
-                    <div class="team__photo"><img src="assets/team_members/ricardo.png" alt="Ricardo" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=R'"></div>
-                    <h4 class="team__name">Ricardo</h4>
-                    <p class="team__role" data-i18n="team.role4">Frontend Developer</p>
-                </div>
-                <div class="team__member">
-                    <div class="team__photo"><img src="assets/team_members/rosangela.jpeg" alt="Rosangela" onerror="this.src='https://placehold.co/112x112/cccccc/ffffff?text=Ro'"></div>
-                    <h4 class="team__name">Rosangela</h4>
-                    <p class="team__role" data-i18n="team.role5">QA & Testing</p>
-                </div>
-            </div>
-            <section class="section">
-                <div class="container container--narrow">
-                    <div class="section__header">
-                        <h2 class="section__title" data-i18n="aboutTeam.title">
-                            About the Team
-                        </h2>
-
-                        <p class="section__subtitle" data-i18n="aboutTeam.subtitle">
-                            Learn more about the team behind Fabric.
-                        </p>
-                    </div>
-
-                    <div class="about-team">
-                        <div class="about-team__icon">▶</div>
-                        <p class="about-team__label" data-i18n="aboutTeam.label">
-                            ABOUT THE TEAM
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </section>
-
-        <section id="plans" class="section">
-        <div class="container">
-            <div class="section__header">
-                <h2 class="section__title" data-i18n="plans.title">Plans for every workshop</h2>
-                <p class="section__subtitle" data-i18n="plans.subtitle">Choose the plan that fits the size of your production.</p>
-            </div>
-
-            <div class="grid grid--3">
-                <div class="plan">
-                    <h3 class="plan__name" data-i18n="plans.starter.name">Starter</h3>
-                    <p class="plan__desc" data-i18n="plans.starter.desc">For small workshops taking their first step into digital tracking.</p>
-                    <div class="plan__price">
-                        <span class="plan__price-amount" data-i18n="plans.starter.price">S/ 59</span>
-                        <span class="plan__price-period" data-i18n="plans.starter.period">/ month</span>
-                    </div>
-                    <ul class="plan__features">
-                        <li data-i18n="plans.starter.f1">Up to 2 active production batches</li>
-                        <li data-i18n="plans.starter.f2">Basic machinery registry</li>
-                        <li data-i18n="plans.starter.f3">1 user account</li>
-                        <li data-i18n="plans.starter.f4">Email support</li>
-                    </ul>
-                    <a href="#request-demo" class="btn btn--primary btn--full" data-i18n="plans.starter.cta">Get Started</a>
-                </div>
-
-                <div class="plan plan--featured">
-                    <span class="plan__badge" data-i18n="plans.growth.badge">MOST POPULAR</span>
-                    <h3 class="plan__name" data-i18n="plans.growth.name">Growth</h3>
-                    <p class="plan__desc" data-i18n="plans.growth.desc">For MYPEs ready to scale production with full traceability.</p>
-                    <div class="plan__price">
-                        <span class="plan__price-amount" data-i18n="plans.growth.price">S/ 149</span>
-                        <span class="plan__price-period" data-i18n="plans.growth.period">/ month</span>
-                    </div>
-                    <ul class="plan__features">
-                        <li data-i18n="plans.growth.f1">Unlimited production batches</li>
-                        <li data-i18n="plans.growth.f2">Full machinery &amp; maintenance tracking</li>
-                        <li data-i18n="plans.growth.f3">Quality control &amp; defect traceability</li>
-                        <li data-i18n="plans.growth.f4">Up to 10 user accounts</li>
-                        <li data-i18n="plans.growth.f5">Priority support</li>
-                    </ul>
-                    <a href="#request-demo" class="btn btn--primary btn--full" data-i18n="plans.growth.cta">Request a Demo</a>
-                </div>
-
-                <div class="plan">
-                    <h3 class="plan__name" data-i18n="plans.enterprise.name">Enterprise</h3>
-                    <p class="plan__desc" data-i18n="plans.enterprise.desc">For larger operations that need custom metrics and integrations.</p>
-                    <div class="plan__price">
-                        <span class="plan__price-amount" data-i18n="plans.enterprise.price">Custom</span>
-                    </div>
-                    <ul class="plan__features">
-                        <li data-i18n="plans.enterprise.f1">Everything in Growth</li>
-                        <li data-i18n="plans.enterprise.f2">Custom dashboards &amp; reports</li>
-                        <li data-i18n="plans.enterprise.f3">Unlimited user accounts</li>
-                        <li data-i18n="plans.enterprise.f4">Dedicated account manager</li>
-                    </ul>
-                    <a href="#request-demo" class="btn btn--primary btn--full" data-i18n="plans.enterprise.cta">Contact Sales</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container container--narrow">
-            <div class="section__header">
-                <h2 class="section__title" data-i18n="video.title">See how Fabric works in a textile workshop</h2>
-                <p class="section__subtitle" data-i18n="video.subtitle">A short product demo showing the day-to-day operations.</p>
-            </div>
-            <div class="video">
-                <div class="video__play">▶</div>
-                <p class="video__label" data-i18n="video.label">FABRIC PRODUCT</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="request-demo" class="section section--alt">
-        <div class="container">
-            <div class="demo">
-                <div class="demo__text">
-                    <h2 class="demo__title" data-i18n="form.title">Start Up</h2>
-                    <p class="demo__subtitle" data-i18n="form.subtitle">Complete the form to receive personalized information about Fabric.</p>
-                </div>
-                <div class="demo__form-wrap">
-                    <form class="demo__form" onsubmit="event.preventDefault(); alert('Demo requested successfully!');">
-                        <div class="form-group">
-                            <label class="form-label" data-i18n="form.name">Name *</label>
-                            <input type="text" required class="form-input" placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" data-i18n="form.email">Email *</label>
-                            <input type="email" required class="form-input" placeholder="john@company.com">
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label" data-i18n="form.phone">Phone *</label>
-                                <input type="tel" required class="form-input" placeholder="+51 934 567 890">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" data-i18n="form.company">Company *</label>
-                                <input type="text" required class="form-input" placeholder="Textiles Inc.">
-                            </div>
-                        </div>
-                        <button type="submit" class="btn btn--primary btn--full btn--lg" data-i18n="form.submit">Submit Request</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer__brand">
-                    <h3 class="footer__logo">FABRIC</h3>
-                    <p class="footer__tagline" data-i18n="footer.tagline">Smart management for textile production.</p>
-                </div>
-                <div class="footer__links">
-                    <a href="#home" class="footer__link" data-i18n="nav.home">Home</a>
-                    <span>·</span>
-                    <a href="#features" class="footer__link" data-i18n="nav.features">Features</a>
-                    <span>·</span>
-                    <a href="#benefits" class="footer__link" data-i18n="nav.benefits">Benefits</a>
-                    <span>·</span>
-                    <a href="#team" class="footer__link" data-i18n="nav.team">Team</a>
-                </div>
-                <div class="footer__legal">
-                    <a href="terms.html" class="footer__link" data-i18n="footer.terms">Terms and Conditions</a>
-                    <p data-i18n="footer.copyright">&copy; 2026 Fabric - GlitchLab</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="assets/i18n/en.js"></script>
-    <script src="assets/i18n/es.js"></script>
-    <script src="assets/i18n/main.js"></script>
+<script src="assets/i18n/en.js"></script>
+<script src="assets/i18n/es.js"></script>
+<script src="assets/i18n/main.js"></script>
 </body>
 </html>
