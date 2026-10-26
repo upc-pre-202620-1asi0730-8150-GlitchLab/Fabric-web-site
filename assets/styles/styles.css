@@ -538,7 +538,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .team__name { font-size: 18px; }
 .team__role { font-size: 14px; color: var(--graytext); }
 
-/*video*/
+/* Video */
 .video {
     position: relative;
     width: 100%;
@@ -675,7 +675,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     box-shadow: var(--shadow-md);
 }
 
-/* footer */
+/* Footer */
 .footer {
     background: var(--primary);
     color: var(--white);
