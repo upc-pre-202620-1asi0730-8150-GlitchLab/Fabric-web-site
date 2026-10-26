@@ -105,7 +105,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .container--narrow { max-width: 900px; }
 
-/*div*/
+/* Navbar */
 .nav {
     position: fixed;
     top: 0;
@@ -177,7 +177,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding-top: 12px;
 }
 
-/*lan toggle*/
+/* Language toggle */
 .lang-toggle {
     display: flex;
     align-items: center;
@@ -230,7 +230,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     padding: 4px;
     flex-shrink: 0;
 }
-/*Botones */
+/* Buttons */
 .btn {
     display: inline-block;
     font-weight: 500;
@@ -251,7 +251,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn--lg { padding: 16px 32px; font-size: 17px; }
 .btn--full { width: 100%; }
 
-/*Hero*/
+/* Hero */
 .hero { padding: 128px 0 80px; }
 .hero__inner {
     display: flex;
@@ -313,7 +313,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     font-family: 'Poppins', sans-serif;
 }
 
-/* secciones*/
+/* Sections */
 .section { padding: 80px 0; }
 .section--alt { background: var(--section); }
 
@@ -345,7 +345,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--graytext);
 }
 
-/*grid */
+/* Grid */
 .grid {
     display: grid;
     gap: 32px;
@@ -354,7 +354,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .grid--4 { grid-template-columns: 1fr; }
 .grid--center { text-align: center; }
 
-/* card - problem */
+/* Problem cards */
 .card {
     background: var(--white);
     padding: 32px;
@@ -404,7 +404,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     line-height: 1;
 }
 
-/* solution cards*/
+/* Solution cards */
 .solution-card {
     border: 1px solid var(--border);
     border-radius: var(--radius-lg);
@@ -469,7 +469,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     text-overflow: ellipsis;
 }
 
-/* features */
+/* Features */
 .feature {
     background: var(--white);
     padding: 24px;
@@ -498,7 +498,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--main);
 }
 
-/* benefits */
+/* Benefits */
 .benefit {
     text-align: center;
 }
@@ -523,7 +523,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     color: var(--graytext);
 }
 
-/*team */
+/* Team */
 .team {
     display: flex;
     flex-wrap: wrap;
@@ -549,7 +549,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .team__name { font-size: 18px; }
 .team__role { font-size: 14px; color: var(--graytext); }
 
-/*Video*/
+/* Video */
 .video {
     position: relative;
     width: 100%;
@@ -588,7 +588,7 @@ font-size: 32px;
     color: var(--main);
 }
 
-/* demo / form */
+/* Demo / form */
 .demo {
     display: flex;
     flex-direction: column;
@@ -654,7 +654,7 @@ font-size: 32px;
     box-shadow: 0 0 0 3px rgba(74,85,57,0.15);
 }
 
-/*Footer */
+/* Footer */
 .footer {
     background: var(--primary);
     color: var(--white);
@@ -1009,7 +1009,7 @@ font-size: 32px;
 }
 
 
-/* plans / pricing */
+/* Plans / pricing */
 .plan {
     position: relative;
     background: var(--white);

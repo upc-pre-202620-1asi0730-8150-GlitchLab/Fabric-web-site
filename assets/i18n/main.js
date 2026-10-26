@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileMenu.classList.toggle('is-open');
         });
 
-        // Cierra el menú al hacer clic en un enlace
+        // Close the menu when a link is clicked
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 burger.classList.remove('is-open');
