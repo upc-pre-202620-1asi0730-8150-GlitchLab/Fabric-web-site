@@ -117,6 +117,11 @@ window.translations['en'] = {
         'cta.title': 'Take your workshop to the next level!',
         'cta.subtitle': 'Manage production, quality, and traceability in one place. Reduce errors, spot issues earlier, and make decisions with clear operational data.',
         'cta.btn': 'Start App',
+        'cta.eyebrow': 'Ready to get started?',
+        'cta.point1': 'No installation required',
+        'cta.point2': 'Real-time production tracking',
+        'cta.point3': 'Plans for every workshop size',
+        'cta.secondary': 'View plans',
 
         'team.title': 'Meet the Team',
         'team.subtitle': 'Meet the GlitchLab team behind Fabric.',

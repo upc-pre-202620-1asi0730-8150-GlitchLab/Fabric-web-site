@@ -116,6 +116,11 @@ window.translations['es'] = {
         'cta.title': '¡Lleva tu taller al siguiente nivel!',
         'cta.subtitle': 'Controla producción, calidad y trazabilidad desde un solo lugar. Reduce errores, detecta problemas a tiempo y toma decisiones con datos claros.',
         'cta.btn': 'Iniciar Aplicación',
+        'cta.eyebrow': '¿Listo para empezar?',
+        'cta.point1': 'Sin instalaciones',
+        'cta.point2': 'Producción en tiempo real',
+        'cta.point3': 'Planes para cada tamaño de taller',
+        'cta.secondary': 'Ver planes',
 
         'team.title': 'Conoce al Equipo',
         'team.subtitle': 'Conoce al equipo GlitchLab detrás de Fabric.',
