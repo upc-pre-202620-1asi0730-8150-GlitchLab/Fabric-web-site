@@ -643,15 +643,58 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* CTA */
 .cta-banner {
-    background: var(--primary);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.12), transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(209, 250, 229, 0.14), transparent 45%),
+        linear-gradient(135deg, var(--primary) 0%, #5d6b47 55%, var(--primary-hover) 100%);
     color: var(--white);
-    padding: 64px 32px;
+    padding: 72px 32px;
     border-radius: var(--radius-lg);
     text-align: center;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 45px rgba(74, 85, 57, 0.35);
+}
+/* Stitched inner border, inspired by a textile seam */
+.cta-banner::before {
+    content: "";
+    position: absolute;
+    inset: 14px;
+    border: 2px dashed rgba(255, 255, 255, 0.22);
+    border-radius: calc(var(--radius-lg) - 6px);
+    pointer-events: none;
+    z-index: -1;
+}
+/* Soft decorative glow */
+.cta-banner::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    right: -110px;
+    top: -130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.16), transparent 70%);
+    animation: cta-float 8s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+.cta-banner__eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 6px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #D1FAE5;
 }
 .cta-banner__title {
-    font-size: 32px;
+    font-size: 36px;
     color: var(--white);
     margin-bottom: 16px;
     font-family: 'Poppins', sans-serif;
@@ -660,19 +703,79 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .cta-banner__subtitle {
     font-size: 18px;
     color: #D1FAE5;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.6;
 }
+.cta-banner__highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 28px;
+    margin: 0 auto 36px;
+    padding: 0;
+    list-style: none;
+}
+.cta-banner__highlights li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--white);
+}
+.cta-banner__highlights li::before {
+    content: "\2713";
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: rgba(209, 250, 229, 0.2);
+    color: #D1FAE5;
+    font-size: 12px;
+    font-weight: 700;
+}
+.cta-banner__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
 .cta-banner .btn--primary {
     background: var(--white);
     color: var(--primary);
+    font-weight: 600;
 }
 .cta-banner .btn--primary:hover {
     background: #e2e8f0;
-    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+.cta-banner__secondary {
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    color: var(--white);
+}
+.cta-banner__secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: var(--white);
+    transform: translateY(-2px);
+}
+@keyframes cta-float {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-30px, 25px); }
+}
+@media (max-width: 480px) {
+    .cta-banner::before { inset: 8px; }
+    .cta-banner__actions .btn { width: 100%; }
+    .cta-banner__highlights { flex-direction: column; align-items: center; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .cta-banner::after { animation: none; }
+    .cta-banner .btn { transition: none; }
 }
 
 /* Footer */
