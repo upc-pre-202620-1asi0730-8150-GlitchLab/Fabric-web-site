@@ -7,23 +7,18 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <link rel="stylesheet" href="assets/styles/styles.css">
-
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
 <body>
 
 <nav class="nav">
     <div class="container nav__inner">
-        <div class="nav__logo">
+        <a href="#home" class="nav__logo">
             <img src="assets/images/logo/fabric-logo.png" alt="Fabric Logo">
-        </div>
+            <span class="nav__brand">Fabric</span>
+        </a>
 
         <div class="nav__menu">
             <a href="#home" class="nav__link" data-i18n="nav.home">Home</a>
@@ -41,11 +36,7 @@
                 <button class="lang-btn" data-lang="es">ES</button>
             </div>
 
-            <a href="https://hola-c9301.web.app/dashboard"
-               class="btn btn--primary btn--sm"
-               data-i18n="nav.demo">
-                Initiate App
-            </a>
+            <a href="https://hola-c9301.web.app/dashboard" target="_blank" class="btn btn--primary btn--sm" data-i18n="nav.demo">Start App</a>
         </div>
 
         <div class="nav__mobile-controls">
@@ -53,7 +44,7 @@
                 <button class="lang-btn-mob active" data-lang="en">EN</button>
                 <button class="lang-btn-mob" data-lang="es">ES</button>
             </div>
-            <button class="nav__burger" id="mobile-menu-btn" aria-label="Menu">
+            <button class="nav__burger" id="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -66,16 +57,28 @@
         <a href="#problem" class="nav__mobile-link" data-i18n="nav.problem">Problem</a>
         <a href="#solution" class="nav__mobile-link" data-i18n="nav.solution">Solution</a>
         <a href="#features" class="nav__mobile-link" data-i18n="nav.features">Features</a>
+        <a href="#benefits" class="nav__mobile-link" data-i18n="nav.benefits">Benefits</a>
+        <a href="#plans" class="nav__mobile-link" data-i18n="nav.plans">Plans</a>
         <a href="#team" class="nav__mobile-link" data-i18n="nav.team">Team</a>
+        <a href="https://hola-c9301.web.app/dashboard" target="_blank" class="btn btn--primary btn--full nav__mobile-cta" data-i18n="nav.demo">Start App</a>
     </div>
 </nav>
 
 <section id="home" class="hero">
     <div class="container hero__inner">
         <div class="hero__text">
+            <span class="hero__badge" data-i18n="hero.badge">Built for textile MYPEs</span>
             <h1 class="hero__title" data-i18n="hero.title">Manage your textile production with clarity.</h1>
             <p class="hero__subtitle" data-i18n="hero.subtitle">Manage production, quality, and traceability all in one place.</p>
-            <a href="#cta" class="btn btn--primary btn--lg" data-i18n="hero.btn">Start App</a>
+            <div class="hero__actions">
+                <a href="#cta" class="btn btn--primary btn--lg" data-i18n="hero.btn">Start App</a>
+                <a href="#app-info" class="btn btn--lg btn--ghost" data-i18n="hero.btn2">See it in action</a>
+            </div>
+            <ul class="hero__highlights">
+                <li data-i18n="hero.point1">Real-time batch tracking</li>
+                <li data-i18n="hero.point2">Quality traceability</li>
+                <li data-i18n="hero.point3">Machine downtime control</li>
+            </ul>
         </div>
 
         <div class="hero__media">
@@ -143,6 +146,7 @@
 
         <div class="grid grid--3">
             <div class="solution-card">
+                <span class="solution-card__number">01</span>
                 <h3 class="solution-card__title" data-i18n="solution.card1.title">Production Tracking</h3>
                 <div class="solution-card__body">
                     <div class="solution-block solution-block--problem">
@@ -160,6 +164,7 @@
             </div>
 
             <div class="solution-card">
+                <span class="solution-card__number">02</span>
                 <h3 class="solution-card__title" data-i18n="solution.card2.title">Quality Control</h3>
                 <div class="solution-card__body">
                     <div class="solution-block solution-block--problem">
@@ -177,6 +182,7 @@
             </div>
 
             <div class="solution-card">
+                <span class="solution-card__number">03</span>
                 <h3 class="solution-card__title" data-i18n="solution.card3.title">Operational Visibility</h3>
                 <div class="solution-card__body">
                     <div class="solution-block solution-block--problem">
@@ -198,7 +204,7 @@
 
 <section id="features" class="section section--alt">
     <div class="container">
-        <div class="section__header section__header--left">
+        <div class="section__header">
             <h2 class="section__title" data-i18n="features.title">Key Features</h2>
             <p class="section__subtitle" data-i18n="features.subtitle">Tools designed to optimize textile production management.</p>
         </div>
@@ -280,33 +286,33 @@
         <div class="app-screenshots-grid">
             <div class="screenshot-wrapper screen-dash">
                 <h4 data-i18n="appInfo.dash">Main Dashboard</h4>
-                <img src="assets/images/screenshots/app-dashboard.png" alt="Fabric Dashboard" class="app-screenshot">
+                <div class="browser-frame"><img src="assets/images/screenshots/app-dashboard.png" alt="Fabric Dashboard" class="app-screenshot"></div>
             </div>
 
             <div class="screenshot-wrapper screen-prod">
                 <h4 data-i18n="appInfo.prod">Production Batches</h4>
-                <img src="assets/images/screenshots/app-production.png" alt="Production Batches" class="app-screenshot">
+                <div class="browser-frame"><img src="assets/images/screenshots/app-production.png" alt="Production Batches" class="app-screenshot"></div>
             </div>
 
             <div class="screenshot-wrapper screen-qual">
                 <h4 data-i18n="appInfo.qual">Quality Control</h4>
-                <img src="assets/images/screenshots/app-quality.png" alt="Quality Control" class="app-screenshot">
+                <div class="browser-frame"><img src="assets/images/screenshots/app-quality.png" alt="Quality Control" class="app-screenshot"></div>
             </div>
 
             <div class="screenshot-wrapper screen-mach">
                 <h4 data-i18n="appInfo.mach">Machinery</h4>
-                <img src="assets/images/screenshots/app-machinery.png" alt="Machinery" class="app-screenshot">
+                <div class="browser-frame"><img src="assets/images/screenshots/app-machinery.png" alt="Machinery" class="app-screenshot"></div>
             </div>
 
             <div class="screenshot-wrapper screen-alert">
                 <h4 data-i18n="appInfo.alert">Alerts</h4>
-                <img src="assets/images/screenshots/app-alerts.png" alt="Alerts" class="app-screenshot">
+                <div class="browser-frame"><img src="assets/images/screenshots/app-alerts.png" alt="Alerts" class="app-screenshot"></div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section">
+<section id="video" class="section">
     <div class="container container--narrow">
         <div class="section__header">
             <h2 class="section__title" data-i18n="video.title">See how Fabric works in a textile workshop</h2>
@@ -319,7 +325,7 @@
     </div>
 </section>
 
-<section id="   plans" class="section section--alt">
+<section id="plans" class="section section--alt">
     <div class="container">
         <div class="section__header">
             <h2 class="section__title" data-i18n="plans.title">Plans for every workshop</h2>
@@ -380,19 +386,7 @@
     </div>
 </section>
 
-
-
-<section id="cta" class="section">
-    <div class="container">
-        <div class="cta-banner">
-            <h2 class="cta-banner__title" data-i18n="cta.title">Take your workshop to the next level!</h2>
-            <p class="cta-banner__subtitle" data-i18n="cta.subtitle">Join the textile workshops that are already optimizing their production and reducing errors. Digitize your control today.</p>
-            <a href="https://hola-c9301.web.app/dashboard" target="_blank" class="btn btn--primary btn--lg" data-i18n="cta.btn">Start App</a>
-        </div>
-    </div>
-</section>
-
-<section id="team" class="section section--alt">
+<section id="team" class="section">
     <div class="container">
         <div class="section__header">
             <h2 class="section__title" data-i18n="team.title">Meet the Team</h2>
@@ -422,9 +416,8 @@
             </div>
         </div>
 
-        <div class="container container--narrow" style="margin-top: 80px;">
+        <div class="container container--narrow about-team-wrapper">
             <div class="section__header">
-                <h2 class="section__title" data-i18n="aboutTeam.title">About the Team</h2>
                 <p class="section__subtitle" data-i18n="aboutTeam.subtitle">Learn more about the team behind Fabric.</p>
             </div>
 
@@ -436,49 +429,67 @@
     </div>
 </section>
 
+<section id="cta" class="section section--alt">
+    <div class="container">
+        <div class="cta-banner">
+            <span class="cta-banner__eyebrow" data-i18n="cta.eyebrow">Ready to get started?</span>
+            <h2 class="cta-banner__title" data-i18n="cta.title">Take your workshop to the next level!</h2>
+            <p class="cta-banner__subtitle" data-i18n="cta.subtitle">Manage production, quality, and traceability in one place. Reduce errors, spot issues earlier, and make decisions with clear operational data.</p>
+            <ul class="cta-banner__highlights">
+                <li data-i18n="cta.point1">No installation required</li>
+                <li data-i18n="cta.point2">Real-time production tracking</li>
+                <li data-i18n="cta.point3">Plans for every workshop size</li>
+            </ul>
+            <div class="cta-banner__actions">
+                <a href="https://hola-c9301.web.app/dashboard" target="_blank" class="btn btn--primary btn--lg" data-i18n="cta.btn">Start App</a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer class="footer">
     <div class="container">
         <div class="footer__top">
             <div class="footer__brand">
-                <h3 class="footer__logo">FABRIC</h3>
+                <a href="#home" class="footer__logo">
+                    <img src="assets/images/logo/fabric-logo.png" alt="Fabric Logo">
+                    <span>FABRIC</span>
+                </a>
                 <p class="footer__tagline" data-i18n="footer.tagline">Smart management for textile production.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/51935598887" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
             </div>
-            <div class="footer__links">
+
+            <div class="footer__column">
+                <h4 data-i18n="footer.navTitle">Navigation</h4>
                 <a href="#home" class="footer__link" data-i18n="nav.home">Home</a>
                 <a href="#features" class="footer__link" data-i18n="nav.features">Features</a>
                 <a href="#benefits" class="footer__link" data-i18n="nav.benefits">Benefits</a>
+                <a href="#plans" class="footer__link" data-i18n="nav.plans">Plans</a>
                 <a href="#team" class="footer__link" data-i18n="nav.team">Team</a>
             </div>
-            <div class="footer__contact">
-                <h4 data-i18n="footer.contactTitle">Contact Information</h4>
-                <p data-i18n="footer.address">Address: Lima, Peru</p>
-                <p><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@fabric-app.com" data-i18n="footer.email">Correo: contacto@fabric-app.com</a></p>
-                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+51935598887" data-i18n="footer.phone">Teléfono: +51 935 598 887</a></p>
-            </div>
-            <div class="footer__social">
-                <h4 data-i18n="footer.socialTitle">Follow Us</h4>
-                <div class="social-icons">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://wa.me/51935598887" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer__bottom">
-            <div class="footer__legal-links">
+
+            <div class="footer__column">
+                <h4 data-i18n="footer.legalTitle">Legal</h4>
                 <a href="terms.html" class="footer__link" data-i18n="footer.terms">Terms and Conditions</a>
                 <a href="privacy-policy.html" class="footer__link" data-i18n="footer.privacy">Privacy Policy</a>
             </div>
-            <p data-i18n="footer.copyright">&copy; 2026 Fabric - GlitchLab</p>
+
+            <div class="footer__column footer__contact">
+                <h4 data-i18n="footer.contactTitle">Contact Information</h4>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span data-i18n="footer.address">Address: Lima, Peru</span></p>
+                <p><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@fabric-app.com" data-i18n="footer.email">Email: contact@fabric-app.com</a></p>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+51935598887" data-i18n="footer.phone">Phone: +51 935 598 887</a></p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Fabric. All rights reserved.</p>
+            <p class="footer__made" data-i18n="footer.made">Made with care in Lima, Peru</p>
         </div>
     </div>
 </footer>
