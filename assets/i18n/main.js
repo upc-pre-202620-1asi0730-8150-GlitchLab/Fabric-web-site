@@ -1,23 +1,113 @@
+// Enables the CSS states that depend on JavaScript (e.g. reveal on scroll)
+document.documentElement.classList.add('js');
 
+/* ===== Mobile menu ===== */
 document.addEventListener('DOMContentLoaded', () => {
     const burger = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
     if (burger && mobileMenu) {
+        const setOpen = isOpen => {
+            burger.classList.toggle('is-open', isOpen);
+            mobileMenu.classList.toggle('is-open', isOpen);
+            burger.setAttribute('aria-expanded', String(isOpen));
+        };
+
         burger.addEventListener('click', () => {
-            burger.classList.toggle('is-open');
-            mobileMenu.classList.toggle('is-open');
+            setOpen(!mobileMenu.classList.contains('is-open'));
         });
 
+        // Close the menu when a link is clicked
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                burger.classList.remove('is-open');
-                mobileMenu.classList.remove('is-open');
-            });
+            link.addEventListener('click', () => setOpen(false));
         });
     }
 });
 
+/* ===== Header: shadow on scroll and active link ===== */
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+
+    const updateNav = () => nav.classList.toggle('nav--scrolled', window.scrollY > 12);
+    updateNav();
+    window.addEventListener('scroll', updateNav, { passive: true });
+
+    const links = document.querySelectorAll('.nav__link[href^="#"], .nav__mobile-link[href^="#"]');
+    const sections = [...new Set([...links].map(link => link.getAttribute('href')))]
+        .map(id => document.querySelector(id))
+        .filter(Boolean);
+
+    if (!sections.length || !('IntersectionObserver' in window)) return;
+
+    const setActive = id => {
+        links.forEach(link => {
+            link.classList.toggle('is-active', link.getAttribute('href') === `#${id}`);
+        });
+    };
+
+    const spy = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) setActive(entry.target.id);
+        });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach(section => spy.observe(section));
+});
+
+/* ===== Reveal sections smoothly when they enter the screen ===== */
+document.addEventListener('DOMContentLoaded', () => {
+    const selectors = [
+        '.hero__text', '.hero__media',
+        '.section__header',
+        '.card', '.solution-card', '.feature', '.benefit',
+        '.screenshot-wrapper', '.video', '.plan',
+        '.team__member', '.about-team', '.cta-banner',
+        '.legal-hero .container', '.legal-toc', '.legal-item', '.legal-note',
+        '.footer__top > *'
+    ];
+
+    const elements = document.querySelectorAll(selectors.join(','));
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+        elements.forEach(el => el.classList.add('reveal', 'is-visible'));
+        return;
+    }
+
+    elements.forEach(el => {
+        // Hide the element instantly (without animating the hiding)
+        el.style.transition = 'none';
+        el.classList.add('reveal');
+        void el.offsetHeight;
+        el.style.transition = '';
+
+        // Elements inside the same group appear one after another
+        const siblings = [...el.parentElement.children].filter(child => child.matches(selectors.join(',')));
+        const index = siblings.indexOf(el);
+        if (index > 0) el.style.transitionDelay = `${Math.min(index, 5) * 90}ms`;
+    });
+
+    // Once visible, give the element back its own hover transitions
+    const cleanUp = el => {
+        el.classList.remove('reveal', 'is-visible');
+        el.style.transitionDelay = '';
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            const el = entry.target;
+            el.classList.add('is-visible');
+            el.addEventListener('transitionend', () => cleanUp(el), { once: true });
+            obs.unobserve(el);
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    elements.forEach(el => observer.observe(el));
+});
+
+/* ===== Translations ===== */
 function applyTranslations(lang) {
     const t = window.translations && window.translations[lang];
 
@@ -65,13 +155,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/* ===== Plan selection popup ===== */
 document.addEventListener('DOMContentLoaded', () => {
     const successMessage = document.getElementById('plan-success');
 
-    if (!successMessage) {
-        console.error('No se encontró el elemento #plan-success en index.html');
-        return;
-    }
+    // Only the landing page has plans
+    if (!successMessage) return;
 
     document.querySelectorAll('#plans .plan__buy').forEach(button => {
         button.addEventListener('click', event => {
