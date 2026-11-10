@@ -3,86 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Terms and Conditions | Fabric</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600&display=swap"
-          rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="assets/styles/styles.css">
 </head>
+<body class="legal-page">
 
-<body>
-
-<header class="terms-header">
-    <div class="container terms-header__content">
-        <a href="index.html">
-            <img src="assets/images/logo/fabric-logo.png"
-                 alt="Fabric Logo"
-                 class="terms-header__logo">
+<nav class="nav">
+    <div class="container nav__inner">
+        <a href="index.html" class="nav__logo">
+            <img src="assets/images/logo/fabric-logo.png" alt="Fabric Logo">
+            <span class="nav__brand">Fabric</span>
         </a>
 
-        <a href="index.html" class="terms-header__back">
-            ← Back to Home
-        </a>
+        <div class="nav__legal-actions">
+            <div class="lang-toggle">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="es">ES</button>
+            </div>
+            <a href="index.html" class="legal-back"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> <span data-i18n="legal.back">Back to Home</span></a>
+        </div>
     </div>
-</header>
+</nav>
 
 <main>
-    <section class="terms-title">
+    <section class="legal-hero">
         <div class="container">
-            <h1>Terms and Conditions</h1>
-            <p>Please review the terms and conditions for using Fabric.</p>
+            <span class="hero__badge" data-i18n="legal.badge">Legal</span>
+            <h1 data-i18n="terms.title">Terms and Conditions</h1>
+            <p data-i18n="terms.subtitle">Please review the terms and conditions for using Fabric.</p>
+            <p class="legal-hero__updated" data-i18n="terms.updated">Last updated: November 2026</p>
         </div>
     </section>
 
-    <section class="terms-content">
-        <div class="container">
+    <section class="legal-content">
+        <div class="container legal-layout">
+            <aside class="legal-toc">
+                <p class="legal-toc__title" data-i18n="legal.toc">On this page</p>
+                <nav>
+                    <a href="#terms-s1" data-i18n="terms.s1.title">1. General conditions</a>
+                    <a href="#terms-s2" data-i18n="terms.s2.title">2. Use of the platform</a>
+                    <a href="#terms-s3" data-i18n="terms.s3.title">3. User responsibilities</a>
+                    <a href="#terms-s4" data-i18n="terms.s4.title">4. Additional information</a>
+                </nav>
+            </aside>
 
-            <div class="terms-item">
-                <h2>1. General conditions</h2>
-                <p>
-                    Fabric is a digital platform developed to support the management
-                    of textile production processes. By accessing or using Fabric,
-                    users agree to comply with these Terms and Conditions and use
-                    the platform responsibly and appropriately.
-                </p>
+            <div class="legal-body">
+            <article class="legal-item" id="terms-s1">
+                <h2 data-i18n="terms.s1.title">1. General conditions</h2>
+                <p data-i18n="terms.s1.body">Fabric is a digital platform developed to support the management of textile production processes. By accessing or using Fabric, users agree to comply with these Terms and Conditions and use the platform responsibly and appropriately.</p>
+            </article>
+
+            <article class="legal-item" id="terms-s2">
+                <h2 data-i18n="terms.s2.title">2. Use of the platform</h2>
+                <p data-i18n="terms.s2.body">Fabric provides tools for production batch tracking, quality control, machinery monitoring, and production indicators. Users may use these features exclusively for legitimate production management activities and must not attempt to interfere with the operation or security of the platform.</p>
+            </article>
+
+            <article class="legal-item" id="terms-s3">
+                <h2 data-i18n="terms.s3.title">3. User responsibilities</h2>
+                <p data-i18n="terms.s3.body">Users are responsible for providing accurate and updated information when using Fabric. Each user must protect their account credentials and ensure that the information registered about production, quality, machinery, and other processes is used appropriately.</p>
+            </article>
+
+            <article class="legal-item" id="terms-s4">
+                <h2 data-i18n="terms.s4.title">4. Additional information</h2>
+                <p data-i18n="terms.s4.body">Fabric may update its features, services, or these Terms and Conditions as the platform evolves. Any relevant changes may be communicated through the platform. Continued use of Fabric after an update indicates acceptance of the revised terms.</p>
+            </article>
+
+                <div class="legal-note">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                    <p><span data-i18n="legal.questions">Questions about this document? Write to us at</span> <a href="mailto:contact@fabric-app.com">contact@fabric-app.com</a></p>
+                </div>
             </div>
-
-            <div class="terms-item">
-                <h2>2. Use of the platform</h2>
-                <p>
-                    Fabric provides tools for production batch tracking, quality
-                    control, machinery monitoring, and production indicators.
-                    Users may use these features exclusively for legitimate
-                    production management activities and must not attempt to
-                    interfere with the operation or security of the platform.
-                </p>
-            </div>
-
-            <div class="terms-item">
-                <h2>3. User responsibilities</h2>
-                <p>
-                    Users are responsible for providing accurate and updated
-                    information when using Fabric. Each user must protect their
-                    account credentials and ensure that the information registered
-                    about production, quality, machinery, and other processes is
-                    used appropriately.
-                </p>
-            </div>
-
-            <div class="terms-item">
-                <h2>4. Additional information</h2>
-                <p>
-                    Fabric may update its features, services, or these Terms and
-                    Conditions as the platform evolves. Any relevant changes may
-                    be communicated through the platform. Continued use of Fabric
-                    after an update indicates acceptance of the revised terms.
-                </p>
-            </div>
-
         </div>
     </section>
 </main>
@@ -90,32 +85,52 @@
 <footer class="footer">
     <div class="container">
         <div class="footer__top">
-
             <div class="footer__brand">
-                <h3 class="footer__logo">FABRIC</h3>
-                <p class="footer__tagline">
-                    Smart management for textile production.
-                </p>
-            </div>
-
-            <div class="footer__links">
-                <a href="index.html#home" class="footer__link">Home</a>
-                <a href="index.html#features" class="footer__link">Features</a>
-                <a href="index.html#benefits" class="footer__link">Benefits</a>
-                <a href="index.html#team" class="footer__link">Team</a>
-            </div>
-
-            <div class="footer__legal">
-                <div class="footer__legal-links">
-                    <a href="terms.html" class="footer__link">Terms and Conditions</a>
-                    <a href="privacy-policy.html" class="footer__link">Privacy Policy</a>
+                <a href="index.html" class="footer__logo">
+                    <img src="assets/images/logo/fabric-logo.png" alt="Fabric Logo">
+                    <span>FABRIC</span>
+                </a>
+                <p class="footer__tagline" data-i18n="footer.tagline">Smart management for textile production.</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/51935598887" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
-                <p>&copy; 2026 Fabric - GlitchLab</p>
             </div>
 
+            <div class="footer__column">
+                <h4 data-i18n="footer.navTitle">Navigation</h4>
+                <a href="index.html#home" class="footer__link" data-i18n="nav.home">Home</a>
+                <a href="index.html#features" class="footer__link" data-i18n="nav.features">Features</a>
+                <a href="index.html#benefits" class="footer__link" data-i18n="nav.benefits">Benefits</a>
+                <a href="index.html#plans" class="footer__link" data-i18n="nav.plans">Plans</a>
+                <a href="index.html#team" class="footer__link" data-i18n="nav.team">Team</a>
+            </div>
+
+            <div class="footer__column">
+                <h4 data-i18n="footer.legalTitle">Legal</h4>
+                <a href="terms.html" class="footer__link" data-i18n="footer.terms">Terms and Conditions</a>
+                <a href="privacy-policy.html" class="footer__link" data-i18n="footer.privacy">Privacy Policy</a>
+            </div>
+
+            <div class="footer__column footer__contact">
+                <h4 data-i18n="footer.contactTitle">Contact Information</h4>
+                <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <span data-i18n="footer.address">Address: Lima, Peru</span></p>
+                <p><i class="fa-regular fa-envelope" aria-hidden="true"></i> <a href="mailto:contact@fabric-app.com" data-i18n="footer.email">Email: contact@fabric-app.com</a></p>
+                <p><i class="fa-solid fa-phone" aria-hidden="true"></i> <a href="tel:+51935598887" data-i18n="footer.phone">Phone: +51 935 598 887</a></p>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Fabric - GlitchLab. All rights reserved.</p>
+            <p class="footer__made" data-i18n="footer.made">Made with care in Lima, Peru</p>
         </div>
     </div>
 </footer>
 
+<script src="assets/i18n/en.js"></script>
+<script src="assets/i18n/es.js"></script>
+<script src="assets/i18n/main.js"></script>
 </body>
 </html>
